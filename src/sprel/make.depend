@@ -1,0 +1,13 @@
+compute_pr_time.f90 : ../baselib/kind.o
+compute_pr_time.f90 : ../baselib/constants.o
+compute_pr_time.f90 : sprel_data
+lin_alg.f90 : ../baselib/kind.o
+sprel_data.f90 : ../baselib/kind.o
+sprel_data.f90 : ../baselib/constants.o
+sprel_data.f90 : error.o
+sprel_data.f90 : lin_alg.o
+system_init.f90 : ../baselib/kind.o
+system_init.f90 : ../baselib/constants.o
+system_init.f90 : system_data.o
+test_omp.f90 : ../baselib/kind.o
+test_omp.f90 : compute_pr_time.o
