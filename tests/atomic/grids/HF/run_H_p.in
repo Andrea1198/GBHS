@@ -1,0 +1,29 @@
+     
+        &CONTROL
+        calculation = "HF"
+             prefix = "atom_01_H_p"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+        /
+     
+        &SYSTEM
+               atom = 'H'
+             config = '1s0 1s0 2s0 2s0 2p1 2p0'
+              nspin = 2
+               lmax = 1
+               nbnd = 3
+     
+              rxmin = -7.0
+                rdx = 0.010
+               rmax = 40.0
+        /
+     
+        &METHOD
+          !grad_type = '5points'
+          grad_type = '3points_rdiff'
+        beta_mixing = 1.0
+             niterx = 50
+          spin_asym = 0.0
+        dm_conv_thr = 1.0d-8
+      etot_conv_thr = 1.0d-5
+        /

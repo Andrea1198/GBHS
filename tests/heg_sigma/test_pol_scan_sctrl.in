@@ -1,0 +1,55 @@
+
+   &CONTROL
+        prefix='RPA_test'
+  calculation = "polariz_rpa,fit,scan_ctrl,plot"
+     units_in = 'auxfunits'
+       rs_min = 5.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+ &GRIDS
+           nw = 1000
+        w_min = -10
+        w_max = 10
+      w_gtype = 'uniform'
+      w_units = 'notreduced'
+         nk_r = 1000
+        nk_th = 1000
+        k_max = 1
+      k_gtype = 'uniform'
+      lkshift = .false.
+   k_r_gauleg = .false.
+         nq_r = 2
+        nq_th = 1
+        q_max = 0.6
+      q_gtype = 'uniform'
+      lqshift = .false.
+   q_r_gauleg = .false.
+     delta_in = 0.01
+   /
+
+   &PLOT
+       what="pol_vs_w"
+    plot_indx(1)=2
+   /
+
+   &FIT
+    fit_func   = 'polarizability'
+    fit_type   = 'NO-FIT'
+    fit_nbasis = 300
+    fit_verb   = .true.
+    fit_niterx = 1000
+    fit_thr    = 1.0d-3
+   /
+
+   &SCAN_AND_CONTROL
+   sctrl_what='pol'
+   !sctrl_fileoutg=
+   !sctrl_fileoutp=
+   !sctrl_filein=
+   sctrl_verb=.true.
+   sctrl_thr=0
+
+   /
+

@@ -1,0 +1,43 @@
+   &CONTROL
+       prefix = "RPA_test"
+  calculation = "spectr,fit"
+  !calculation = "sigma_gw,spectr,fit"
+  !calculation = "plot"
+     units_in = 'auxfunits'
+       rs_min = 5.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+ &GRIDS
+           nw = 1000
+        w_min = -10
+        w_max = 10
+      w_gtype = 'quadratic_on_ef'
+         nk_r = 1000
+        nk_th = 1
+        k_max = 1
+         nq_r = 1000
+        nq_th = 2000
+        q_max = 10
+     delta_in = 0.01
+   /
+
+   &PLOT
+       what="sigma_vs_w"
+   /
+
+   &FIT
+    fit_func   = 'gprop'
+    fit_type   = 'NL-F-real'
+    fit_nbasis = 300
+    fit_verb   = .true.
+    fit_niterx = 1000
+    fit_thr    = 1.0d-3
+   /
+
+  &SPECTRALF
+    from_fit  = .false.
+    ene_shift_in = 0.0
+   /
+

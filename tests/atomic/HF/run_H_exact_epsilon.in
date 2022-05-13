@@ -1,0 +1,40 @@
+     
+        &CONTROL
+        calculation = "EPSILON"
+             prefix = "atom_01_H_exact"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+       scf_datatype = "BARE_H0"
+        /
+     
+        &SYSTEM
+               atom = 'H'
+             config = '1s1'
+              nspin = 2
+               lmax = 6
+               nbnd = 4
+        /
+     
+        &METHOD
+         basis_type = "bspline"
+          grid_type = "cubic"
+      bspline_size  = 1000
+      bspline_order = 4
+        gauss_order = 10
+               rmax = 100.0
+
+        beta_mixing = 1.0
+             niterx = 5
+          spin_asym = 0.0
+        dm_conv_thr = 1.0d-12
+      etot_conv_thr = 1.0d-12
+        /
+
+       &RESPONSE
+               nomg = 11
+            omg_min = 0.0d0
+            omg_max = 1.0d0
+         resp_delta = 0.01
+         resp_analyt = "time-ordered"
+          nbnd_chi0 = 0
+        /

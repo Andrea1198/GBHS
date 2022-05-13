@@ -1,0 +1,30 @@
+#
+# Reference data from Handbook of Chem and Phys, 
+#                     90th Edition, 2009, pag 10-194.
+#
+# All data obtained using Lmax = 4
+#
+#           Polarization [Ang^3]
+# Atom      RPA-LDA  TD-ALDA   LDA-scf   RPA-HF        Ref Exp/Theo
+#=================================================================
+#
+
+   H        0.88     0.88                 0.467          0.6667  T      ( 0.7005   RPA, H0 exact)
+   He       0.358    0.369                0.233          0.2050  T
+
+   Li      10.18    16.13     21.35       4.62          24.33 
+   Be       5.53     6.59      6.46       3.06           5.60    T
+   F        1.11                                         0.557   T
+   Ne       0.81     0.78                 0.565          0.3956
+
+   Na      10.47    13.62     20.84       5.73          24.11
+   Mg       6.76     7.63     10.52       3.83          10.6     T
+   Ar       0.453    0.509                0.26           1.64
+
+   K       17.47    37.25^a               8.88          43.4
+   Ca      14.53    24.54                 9.38          22.8     T
+   Kr       3.18     3.65                 2.23           2.48    
+
+
+^a lmax = 3  ( numerical instabilities for lmax >=4 )
+

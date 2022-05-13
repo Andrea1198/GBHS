@@ -1,0 +1,393 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.3.0  starts ...
+  Date 22Nov2013 at 18: 9:15 
+
+     Number of MPI processes:       1
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__INTEL -D__FFTW -D__MPI -D__PARA
+      BLAS LIBS :    -L/home/ferretti/devel/agwx/install -lmkl_em64t_nothread
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     test_He_spin
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     HF
+                      step  1 :     HF
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+         Atomic data
+                  Symbol :      He
+         Atomic Number Z :      2
+           Configuration :      1s1 1s1
+                    lmax :      0
+                   nspin :      2
+                nelec UP :      1.000
+                nelec DW :      1.000
+
+         Radial Grid
+                   nmesh :       1139
+                    rmin :      0.000
+                    rmax :     39.919
+               grad type :      3points_rdiff
+
+         Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  1.00
+         1S     1   0   2    0.00  1.00
+
+ </SYSTEM DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.800
+                       niterx :      50
+                  dm_conv_thr :    0.1000E-07
+                etot_conv_thr :    0.1000E-04
+
+ </METHOD>
+
+
+  ======================================================================
+  =  HF SCF loop                                                       =
+  ======================================================================
+
+
+     Workspace Memory Usage:       83.074 MB
+
+   Calculation :    HF
+      update W :     F
+  Starting wfc :    H0
+          nbnd :     1
+
+             l       occ up/dw
+       nval  0 :     1    1
+
+
+
+  Diagonalize the init/guess Hamiltonian
+
+     eigenval: 
+     il  ispin:   0  1
+      -11.4537598
+     il  ispin:   0  2
+      -11.4537598
+
+
+
+  Iteration =   1      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  484  484
+      dm(  0  1) accuracy =     0.850467771
+      dm(  0  2) accuracy =     0.850467771
+
+           ! total energy =    -4.211627810 Ry
+                H0 energy =    -7.438257781 Ry
+           hartree energy =     5.137338304 Ry
+          exchange energy =    -1.910708334 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     1.000000000
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -0.4924805
+     il  ispin:   0  2
+       -0.4924805
+
+
+                              Total time spent up to now :     4.42 secs
+
+
+
+  Iteration =   2      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  438  438
+      dm(  0  1) accuracy =     0.029358708
+      dm(  0  2) accuracy =     0.029358708
+
+           ! total energy =    -5.496634804 Ry
+                H0 energy =    -7.695513187 Ry
+           hartree energy =     4.132037298 Ry
+          exchange energy =    -1.933158914 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.233780675
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.6488049
+     il  ispin:   0  2
+       -1.6488049
+
+
+                              Total time spent up to now :     8.39 secs
+
+
+
+  Iteration =   3      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  438  438
+      dm(  0  1) accuracy =     0.002915012
+      dm(  0  2) accuracy =     0.002915012
+
+           ! total energy =    -5.677894285 Ry
+                H0 energy =    -7.732342455 Ry
+           hartree energy =     4.054160401 Ry
+          exchange energy =    -1.999712231 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.031923715
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8116727
+     il  ispin:   0  2
+       -1.8116727
+
+
+                              Total time spent up to now :    12.36 secs
+
+
+
+  Iteration =   4      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000428912
+      dm(  0  2) accuracy =     0.000428912
+
+           ! total energy =    -5.703183556 Ry
+                H0 energy =    -7.742635623 Ry
+           hartree energy =     4.067716626 Ry
+          exchange energy =    -2.028264560 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.004434238
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8317961
+     il  ispin:   0  2
+       -1.8317961
+
+
+                              Total time spent up to now :    16.40 secs
+
+
+
+  Iteration =   5      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000065587
+      dm(  0  2) accuracy =     0.000065587
+
+           ! total energy =    -5.705065715 Ry
+                H0 energy =    -7.746011299 Ry
+           hartree energy =     4.079619326 Ry
+          exchange energy =    -2.038673742 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000329910
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8319905
+     il  ispin:   0  2
+       -1.8319905
+
+
+                              Total time spent up to now :    20.44 secs
+
+
+
+  Iteration =   6      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000009807
+      dm(  0  2) accuracy =     0.000009807
+
+           ! total energy =    -5.704380197 Ry
+                H0 energy =    -7.747186536 Ry
+           hartree energy =     4.085153455 Ry
+          exchange energy =    -2.042347116 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000120174
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8307186
+     il  ispin:   0  2
+       -1.8307186
+
+
+                              Total time spent up to now :    24.47 secs
+
+
+
+  Iteration =   7      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000001440
+      dm(  0  2) accuracy =     0.000001440
+
+           ! total energy =    -5.703871009 Ry
+                H0 energy =    -7.747606988 Ry
+           hartree energy =     4.087379427 Ry
+          exchange energy =    -2.043643448 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000089271
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8300214
+     il  ispin:   0  2
+       -1.8300214
+
+
+                              Total time spent up to now :    28.51 secs
+
+
+
+  Iteration =   8      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000209
+      dm(  0  2) accuracy =     0.000000209
+
+           ! total energy =    -5.703636018 Ry
+                H0 energy =    -7.747759660 Ry
+           hartree energy =     4.088228681 Ry
+          exchange energy =    -2.044105039 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000041200
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8297096
+     il  ispin:   0  2
+       -1.8297096
+
+
+                              Total time spent up to now :    32.55 secs
+
+
+
+  Iteration =   9      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000030
+      dm(  0  2) accuracy =     0.000000030
+
+           ! total energy =    -5.703540767 Ry
+                H0 energy =    -7.747815628 Ry
+           hartree energy =     4.088545987 Ry
+          exchange energy =    -2.044271126 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000016700
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8295861
+     il  ispin:   0  2
+       -1.8295861
+
+
+                              Total time spent up to now :    36.59 secs
+
+
+
+  Iteration =  10      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000004
+      dm(  0  2) accuracy =     0.000000004
+
+           ! total energy =    -5.703504074 Ry
+                H0 energy =    -7.747836287 Ry
+           hartree energy =     4.088663675 Ry
+          exchange energy =    -2.044331463 Ry
+               sgm energy =     0.000000000 Ry
+
+            etot accuracy =     0.000006433
+
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8295367
+     il  ispin:   0  2
+       -1.8295367
+
+
+                              Total time spent up to now :    40.62 secs
+
+
+  ----------------------------------------
+     HF: conv. achieved                   
+  ----------------------------------------
+
+
+  Iteration ( HF ):    10
+
+  ======================================================================
+
+   <global routines>
+             clock number :     8
+
+                      agf :    40.00s CPU 
+
+              build_rham0 :     0.01s CPU
+                  scf_drv :    40.58s CPU
+        operator_diag_drv :    39.04s CPU (      22 calls,   1.774 s avg)
+               compute_vh :     0.07s CPU (      10 calls,   0.007 s avg)
+               compute_vx :     0.87s CPU (      20 calls,   0.044 s avg)
+               compute_eh :     0.00s CPU (      10 calls,   0.000 s avg)
+               compute_ex :     0.12s CPU (      10 calls,   0.012 s avg)
+
+

@@ -1,0 +1,31 @@
+     
+        &CONTROL
+        calculation = "HF"
+             prefix = "atom_10_Ne"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+        /
+     
+        &SYSTEM
+               atom = 'Ne'
+             config = '1s2 2s2 2p6'
+              nspin = 1
+               lmax = 1
+        /
+     
+        &METHOD
+         basis_type = "bspline"
+          grid_type = "cubic"
+      bspline_size  = 500
+      bspline_order = 4
+        gauss_order = 8
+               rmax = 100.0
+
+        beta_mixing = 0.5
+             niterx = 50
+          spin_asym = 0.0
+        dm_conv_thr = 1.0d-10
+      etot_conv_thr = 1.0d-10
+
+
+        /

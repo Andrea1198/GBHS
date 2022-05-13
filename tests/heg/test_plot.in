@@ -1,0 +1,14 @@
+
+   &CONTROL
+  calculation = "PLOT_P0"
+       rs_min = 1.0
+       rs_max = 1.0
+          nrs = 1
+   /
+
+   &PLOT
+         emin = 0.0
+         emax = 1.2
+           ne = 100
+           qs = 0.01
+   /

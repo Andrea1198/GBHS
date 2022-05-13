@@ -1,0 +1,24 @@
+
+   &CONTROL
+  calculation = "PLOT"
+       rs_min =  2.0
+       rs_max =  2.0
+          nrs =  1
+   /
+
+   &RPA
+           nq = 8000
+           nw = 16000
+       qshift = 0.00000
+       qscale = 0.05
+       wscale = 0.05
+
+   /
+
+   &PLOT
+         what = "P0" 
+           qs = 1.0 
+         emin = -10.0
+         emax =  10.0
+           ne =  1000
+   /

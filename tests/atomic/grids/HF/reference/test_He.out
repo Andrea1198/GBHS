@@ -1,0 +1,349 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.3.0  starts ...
+  Date 22Nov2013 at 18:19: 3 
+
+     Number of MPI processes:       1
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__INTEL -D__FFTW -D__MPI -D__PARA
+      BLAS LIBS :    -L/home/ferretti/devel/agwx/install -lmkl_em64t_nothread
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     02_He_HF
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     HF
+                      step  1 :     HF
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+         Atomic data
+                  Symbol :      He
+         Atomic Number Z :      2
+           Configuration :      1s2
+                    lmax :      0
+                   nspin :      1
+                   nelec :      2.000
+
+         Radial Grid
+                   nmesh :       1139
+                    rmin :      0.000
+                    rmax :     39.919
+               grad type :      3points_rdiff
+
+         Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  2.00
+
+ </SYSTEM DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.800
+                       niterx :      50
+                  dm_conv_thr :    0.1000E-07
+                etot_conv_thr :    0.1000E-04
+
+ </METHOD>
+
+
+  ======================================================================
+  =  HF SCF loop                                                       =
+  ======================================================================
+
+
+     Workspace Memory Usage:       51.920 MB
+
+   Calculation :    HF
+      update W :     F
+  Starting wfc :    H0
+          nbnd :     1
+
+             l       occ up/dw
+       nval  0 :     1
+
+
+
+  Diagonalize the init/guess Hamiltonian
+
+     eigenval: 
+     il  ispin:   0  1
+      -11.4537598
+
+
+
+  Iteration =   1      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  484  484
+      dm(  0  1) accuracy =     3.401871082
+
+
+      Total energy:        2.635121581 au
+         h0 energy:       -1.963159123 au
+    Hartree energy:        9.196561407 au
+       Exch energy:       -4.598280704 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -0.4924805
+
+
+
+                              Total time spent up to now :     2.26 secs
+
+
+  Iteration =   2      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  438  438
+      dm(  0  1) accuracy =     0.117434831
+
+
+      Total energy:       -3.968610854 au
+         h0 energy:       -6.343238049 au
+    Hartree energy:        4.328159467 au
+       Exch energy:       -1.953532272 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.6488049
+
+
+
+                              Total time spent up to now :     4.25 secs
+
+
+  Iteration =   3      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  438  438
+      dm(  0  1) accuracy =     0.011660049
+
+
+      Total energy:       -5.348404307 au
+         h0 energy:       -7.425058159 au
+    Hartree energy:        4.051433677 au
+       Exch energy:       -1.974779825 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8116727
+
+
+
+                              Total time spent up to now :     6.24 secs
+
+
+  Iteration =   4      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.001715648
+
+
+      Total energy:       -5.631542091 au
+         h0 energy:       -7.670885596 au
+    Hartree energy:        4.057096548 au
+       Exch energy:       -2.017753043 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8317961
+
+
+
+                              Total time spent up to now :     8.26 secs
+
+
+  Iteration =   5      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000262349
+
+
+      Total energy:       -5.688977175 au
+         h0 energy:       -7.728285617 au
+    Hartree energy:        4.074173265 au
+       Exch energy:       -2.034864822 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8319905
+
+
+
+                              Total time spent up to now :    10.28 secs
+
+
+  Iteration =   6      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000039230
+
+
+      Total energy:       -5.700565339 au
+         h0 energy:       -7.742466163 au
+    Hartree energy:        4.082896914 au
+       Exch energy:       -2.040996090 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8307186
+
+
+
+                              Total time spent up to now :    12.30 secs
+
+
+  Iteration =   7      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000005759
+
+
+      Total energy:       -5.702896511 au
+         h0 energy:       -7.746242462 au
+    Hartree energy:        4.086508760 au
+       Exch energy:       -2.043162809 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8300214
+
+
+
+                              Total time spent up to now :    14.32 secs
+
+
+  Iteration =   8      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000837
+
+
+      Total energy:       -5.703364605 au
+         h0 energy:       -7.747334083 au
+    Hartree energy:        4.087902020 au
+       Exch energy:       -2.043932542 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8297096
+
+
+
+                              Total time spent up to now :    16.34 secs
+
+
+  Iteration =   9      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000121
+
+
+      Total energy:       -5.703458478 au
+         h0 energy:       -7.747674545 au
+    Hartree energy:        4.088424704 au
+       Exch energy:       -2.044208637 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8295861
+
+
+
+                              Total time spent up to now :    18.36 secs
+
+
+  Iteration =  10      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000018
+
+
+      Total energy:       -5.703477285 au
+         h0 energy:       -7.747787411 au
+    Hartree energy:        4.088618761 au
+       Exch energy:       -2.044308634 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8295367
+
+
+
+                              Total time spent up to now :    20.38 secs
+
+
+  Iteration =  11      Method = HF
+  ===============
+      nr,  kl,  ku:  1139  439  439
+      dm(  0  1) accuracy =     0.000000003
+
+
+      Total energy:       -5.703481050 au
+         h0 energy:       -7.747826511 au
+    Hartree energy:        4.088690625 au
+       Exch energy:       -2.044345163 au
+
+     eigenval: 
+     il  ispin:   0  1
+       -1.8295014
+
+
+
+                              Total time spent up to now :    22.40 secs
+
+  ----------------------------------------
+     HF: conv. achieved                   
+  ----------------------------------------
+
+
+  Iteration ( HF ):    11
+
+  ======================================================================
+
+   <global routines>
+             clock number :     8
+
+                      agf :    22.00s CPU 
+
+              build_rham0 :     0.01s CPU
+                  scf_drv :    22.35s CPU
+        operator_diag_drv :    21.46s CPU (      12 calls,   1.788 s avg)
+               compute_vh :     0.07s CPU (      11 calls,   0.007 s avg)
+               compute_vx :     0.48s CPU (      11 calls,   0.044 s avg)
+               compute_eh :     0.00s CPU (      11 calls,   0.000 s avg)
+               compute_ex :     0.06s CPU (      11 calls,   0.006 s avg)
+
+

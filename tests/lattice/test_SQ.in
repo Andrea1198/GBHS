@@ -1,0 +1,6 @@
+
+&control
+   prefix="runSQ"
+   calculation_type="test_sq"
+/
+

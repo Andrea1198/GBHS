@@ -1,0 +1,787 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.3.0  starts ...
+  Date 17Mar2014 at 16:59:12 
+
+     Number of MPI processes:       1
+     Threads/MPI process:           8
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__INTEL -D__FFTW -D__MPI -D__PARA
+      BLAS LIBS :    -L/home/ferretti/devel/agwx/install -lmkl_em64t_nothread
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+  ======================================================================
+  =  Response function Init                                            =
+  ======================================================================
+
+
+    grid dim:    11
+     omg_min:   0.000000
+     omg_max:   1.000000
+        domg:   0.100000
+  resp_delta:   0.010000
+      analyt: TIME-ORDERED
+
+
+     Omg(    1 ) =     0.000000000
+     Omg(    2 ) =     0.100000000
+     Omg(    3 ) =     0.200000000
+     Omg(    4 ) =     0.300000000
+     Omg(    5 ) =     0.400000000
+     Omg(    6 ) =     0.500000000
+     Omg(    7 ) =     0.600000000
+     Omg(    8 ) =     0.700000000
+     Omg(    9 ) =     0.800000000
+     Omg(   10 ) =     0.900000000
+     Omg(   11 ) =     1.000000000
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     atom_10_Ne
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     EPSILON
+                      step  1 :     EPSILON
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+         Atomic data
+                  Symbol :      Ne
+         Atomic Number Z :     10
+           Configuration :      1s2 2s2 2p6
+                    lmax :      4
+                   nspin :      1
+                   nelec :     10.000
+
+         Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  2.00
+         2S     2   0   1    0.00  2.00
+         2P     2   1   1    0.00  6.00
+
+ </SYSTEM DATA>
+
+
+ <BASIS DATA>
+
+         Main quantities
+               grid type :      cubic
+              basis type :      bspline
+           bspline order :          4
+            bspline size :        750
+             gauss order :          8
+
+         Radial Grid
+                   nmesh :        754
+                     rdx :     0.0100
+                    rmin :      0.000
+                    rmax :    100.000
+
+      0.000000000    0.000000234    0.000001874    0.000006324    0.000014990    0.000029277
+     98.021166154   98.414824986   98.809536382   99.205301746   99.602122483  100.000000000
+
+         Radial Grid Int
+                   nmesh :       6024
+                    rmin :      0.000
+                    rmax :     99.992
+
+      0.000000005    0.000000024    0.000000056    0.000000096    0.000000139    0.000000179
+     99.696512477   99.764568982   99.837553502   99.905610007   99.959549081   99.992100113
+
+
+ </BASIS DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.400
+                       niterx :     100
+                  dm_conv_thr :    0.1000E-09
+                etot_conv_thr :    0.1000E-09
+
+ </METHOD>
+
+
+ <RESPONSE>
+
+    grid dim:    11
+     omg_min:   0.000000
+     omg_max:   1.000000
+        domg:   0.100000
+  resp_delta:   0.010000
+      analyt: TIME-ORDERED
+
+
+     Omg(    1 ) =     0.000000000
+     Omg(    2 ) =     0.100000000
+     Omg(    3 ) =     0.200000000
+     Omg(    4 ) =     0.300000000
+     Omg(    5 ) =     0.400000000
+     Omg(    6 ) =     0.500000000
+     Omg(    7 ) =     0.600000000
+     Omg(    8 ) =     0.700000000
+     Omg(    9 ) =     0.800000000
+     Omg(   10 ) =     0.900000000
+     Omg(   11 ) =     1.000000000
+
+ </RESPONSE>
+
+
+  ======================================================================
+  =  epsilon/Chi0 calculation                                          =
+  ======================================================================
+
+
+          nval : 
+    l(  0) :     2
+    l(  1) :     1
+    l(  2) :     0
+    l(  3) :     0
+    l(  4) :     0
+          nbnd :     2
+     nbnd_chi0 :   750
+         nspin :     1
+          lmax :     4
+      lmax_val :     1
+      lmax_eps :     5
+   Analyticity :    TIME-ORDERED
+  scf datatype :    LDA
+
+     Workspace Memory Usage:      117.126 MB
+   System Data Memory Usage:       49.596 MB
+         Basis Memory Usage:       27.000 MB
+
+
+     HF/DFT eigenval: 
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -60.6115396     -2.6448638     -0.0047927      0.0014243      0.0054136      0.0116704
+           0.0200887      0.0306297      0.0432735      0.0580061      0.0748157      0.0936924
+           0.1146281      0.1376162      0.1626523      0.1897336      0.2188586      0.2500267
+           0.2832371      0.3184889      0.3557804      0.3951089      0.4364714      0.4798649
+           0.5252864      0.5727337      0.6222053      0.6737008      0.7272203      0.7827640
+           0.8403322      0.8999245      0.9615400      1.0251769      1.0908333      1.1585069
+           1.2281961      1.2998994      1.3736164      1.4493469      1.5270914      1.6068502
+           1.6886235      1.7724108      1.8582113      1.9460235      2.0358459      2.1276770
+           2.2215158      2.3173618
+     il  ispin:   1  1
+                         -0.9955108      0.0020272      0.0059785      0.0118722      0.0196757
+                          0.0293561      0.0408926      0.0542884      0.0695738      0.0867962
+                          0.1060038      0.1272328      0.1505036      0.1758234      0.2031917
+                          0.2326041      0.2640561      0.2975442      0.3330661      0.3706211
+                          0.4102083      0.4518268      0.4954745      0.5411487      0.5888455
+                          0.6385611      0.6902919      0.7440353      0.7997896      0.8575545
+                          0.9173300      0.9791166      1.0429145      1.1087231      1.1765409
+                          1.2463663      1.3181968      1.3920305      1.4678661      1.5457028
+                          1.6255406      1.7073801      1.7912220      1.8770667      1.9649138
+                          2.0547627      2.1466120      2.2404602      2.3363060
+     il  ispin:   2  1
+                                         0.0033392      0.0083149      0.0152627      0.0241873
+                                         0.0350847      0.0479471      0.0627639      0.0795232
+                                         0.0982135      0.1188262      0.1413569      0.1658067
+                                         0.1921814      0.2204895      0.2507402      0.2829410
+                                         0.3170970      0.3532112      0.3912856      0.4313223
+                                         0.4733247      0.5172970      0.5632444      0.6111714
+                                         0.6610811      0.7129745      0.7668510      0.8227085
+                                         0.8805448      0.9403585      1.0021492      1.0659177
+                                         1.1316657      1.1993948      1.2691062      1.3407998
+                                         1.4144745      1.4901285      1.5677602      1.6473682
+                                         1.7289522      1.8125131      1.8980522      1.9855709
+                                         2.0750703      2.1665505      2.2600110      2.3554508
+     il  ispin:   3  1
+                                                        0.0049088      0.0109086      0.0188620
+                                                        0.0287908      0.0406997      0.0545892
+                                                        0.0704581      0.0883038      0.1081223
+                                                        0.1299087      0.1536580      0.1793652
+                                                        0.2070268      0.2366410      0.2682083
+                                                        0.3017307      0.3372120      0.3746558
+                                                        0.4140653      0.4554425      0.4987879
+                                                        0.5441014      0.5913822      0.6406305
+                                                        0.6918475      0.7450354      0.8001976
+                                                        0.8573376      0.9164583      0.9775616
+                                                        1.0406480      1.1057169      1.1727671
+                                                        1.2417974      1.3128072      1.3857971
+                                                        1.4607682      1.5377223      1.6166611
+                                                        1.6975857      1.7804962      1.8653919
+                                                        1.9522716      2.0411340      2.1319781
+                                                        2.2248039      2.3196119
+     il  ispin:   4  1
+                                                                       0.0067306      0.0137724      0.0227379
+                                                                       0.0336694      0.0465776      0.0614660
+                                                                       0.0783362      0.0971883      0.1180220
+                                                                       0.1408361      0.1656286      0.1923972
+                                                                       0.2211389      0.2518508      0.2845302
+                                                                       0.3191753      0.3557852      0.3943604
+                                                                       0.4349022      0.4774130      0.5218951
+                                                                       0.5683504      0.6167800      0.6671840
+                                                                       0.7195617      0.7739121      0.8302341
+                                                                       0.8885276      0.9487933      1.0110330
+                                                                       1.0752491      1.1414441      1.2096203
+                                                                       1.2797789      1.3519201      1.4260433
+                                                                       1.5021474      1.5802315      1.6602951
+                                                                       1.7423386      1.8263633      1.9123706
+                                                                       2.0003623      2.0903396      2.1823029
+                                                                       2.2762518
+
+
+
+
+
+  Compute Coulomb potential...
+         Basis Memory Usage:       54.000 MB
+  ... done
+
+       Frequency E(     1 ) =      0.00000 eV                 
+  ==================================================
+
+
+  Compute Triple Integrals...
+         Basis Memory Usage:       54.192 MB
+  ... done
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  103
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  151  151
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  683   47
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  136  136
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  665   51
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  653   81
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  697  123
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  272
+     epsilon^-1... computed
+
+
+
+       Frequency E(     2 ) =      0.10000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  103
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  151  151
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  683   47
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  136  136
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  665   51
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  654   81
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  697  123
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  272
+     epsilon^-1... computed
+
+
+
+       Frequency E(     3 ) =      0.20000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  103
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  151  151
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  683   47
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  136  136
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  666   51
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  655   81
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  698  124
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  272
+     epsilon^-1... computed
+
+
+
+       Frequency E(     4 ) =      0.30000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  103
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  152  152
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  684   47
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  137  137
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  666   51
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  657   82
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  699  126
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  272
+     epsilon^-1... computed
+
+
+
+       Frequency E(     5 ) =      0.40000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  104
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  152  152
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  685   48
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  137  137
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  667   52
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  660   83
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  701  128
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  272
+     epsilon^-1... computed
+
+
+
+       Frequency E(     6 ) =      0.50000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  121  105
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  153  153
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  686   48
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  138  138
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  669   53
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  663   84
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  702  131
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  273
+     epsilon^-1... computed
+
+
+
+       Frequency E(     7 ) =      0.60000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  122  106
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  154  154
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  687   49
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  139  139
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  671   54
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   74   74
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  666   86
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  704  135
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  273
+     epsilon^-1... computed
+
+
+
+       Frequency E(     8 ) =      0.70000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  167  167
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  125  107
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  156  156
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  689   50
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  141  141
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  673   55
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   75   75
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  670   89
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  707  139
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  273
+     epsilon^-1... computed
+
+
+
+       Frequency E(     9 ) =      0.80000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  167  167
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  128  109
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  159  159
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  691   52
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  143  143
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  676   57
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   75   75
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  674   92
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  709  145
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  274
+     epsilon^-1... computed
+
+
+
+       Frequency E(    10 ) =      0.90000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  167  167
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  133  111
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  166  166
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  695   56
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  146  146
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  680   60
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   75   75
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  680   96
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  712  152
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  287
+     epsilon^-1... computed
+
+
+
+       Frequency E(    11 ) =      1.00000 eV                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     CHI0  ndim,  kl,  ku:   750  169  169
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  145  118
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  1
+     CHI0  ndim,  kl,  ku:   750  185  185
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  703   70
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  2
+     CHI0  ndim,  kl,  ku:   750  153  153
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  687   67
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  3
+     CHI0  ndim,  kl,  ku:   750   76   76
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  687  105
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  4
+     CHI0  ndim,  kl,  ku:   750   48   48
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  726  166
+     epsilon^-1... computed
+
+     chi0 RPA... computed for L =  5
+     CHI0  ndim,  kl,  ku:   750   33   33
+     epsilon... computed
+     EPS   ndim,  kl,  ku:   750  749  415
+     epsilon^-1... computed
+
+
+
+
+  ======================================================================
+  =  END epsilon/chi0 calculation                                      =
+  ======================================================================
+
+
+
+Omega [eV]     alpha0 [Bohr^3]       alpha [Bohr^3]
+
+    0.000000000      11.064355077    0.040335137       5.461975947    0.017498777
+    0.100000000      11.084819122    0.040715632       5.472076317    0.017702511
+    0.200000000      11.147301383    0.041899501       5.503017849    0.018340339
+    0.300000000      11.255290589    0.044027388       5.556366386    0.019496669
+    0.400000000      11.415434733    0.047387846       5.636253455    0.021357442
+    0.500000000      11.639262503    0.052542355       5.750456680    0.024305226
+    0.600000000      11.947079624    0.060656372       5.910891462    0.029134172
+    0.700000000      12.378010691    0.074554880       6.143992165    0.037895397
+    0.800000000      13.023444127    0.103448008       6.515844532    0.057657846
+    0.900000000      14.216630590    0.206675686       7.283128191    0.136285680
+    1.000000000      13.379252638    4.478229635       6.285388305    4.136313059
+
+
+Omega [eV]     alpha0 [Ang^3]        alpha [Ang^3]
+
+    0.000000000       1.639566304    0.005977044       0.809380362    0.002593048
+    0.100000000       1.642598759    0.006033427       0.810877081    0.002623238
+    0.200000000       1.651857664    0.006208858       0.815462137    0.002717755
+    0.300000000       1.667859994    0.006524178       0.823367565    0.002889105
+    0.400000000       1.691590880    0.007022146       0.835205593    0.003164843
+    0.500000000       1.724758694    0.007785964       0.852128745    0.003601659
+    0.600000000       1.770372430    0.008988336       0.875902699    0.004317234
+    0.700000000       1.834229750    0.011047880       0.910444618    0.005615512
+    0.800000000       1.929873003    0.015329395       0.965547388    0.008544001
+    0.900000000       2.106684783    0.030626140       1.079246959    0.020195430
+    1.000000000       1.982598321    0.663604373       0.931397339    0.612937624
+
+
+  ======================================================================
+
+   <global routines>
+             clock number :    12
+
+                      agf :  6m40.00s CPU 
+
+              build_rham0 :     0.04s CPU (       5 calls,   0.008 s avg)
+            response_init :     0.00s CPU
+              epsilon_drv :   399.77s CPU
+               compute_vh :     0.19s CPU
+     bspline_rad2spl_rank :     0.02s CPU (       2 calls,   0.008 s avg)
+          compute_vxc_loc :     0.00s CPU
+        operator_diag_drv :     2.93s CPU (       5 calls,   0.586 s avg)
+     basis_CoulombPot_ini :     2.67s CPU
+                 chi0_rpa :    76.77s CPU (      66 calls,   1.163 s avg)
+     basis_TripleInt_init :     0.01s CPU
+       operator_inv_drv_z :     7.57s CPU (      66 calls,   0.115 s avg)
+
+

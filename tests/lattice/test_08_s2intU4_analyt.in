@@ -1,0 +1,30 @@
+
+&control
+   prefix="run08_s2intU4_analyt"
+   calculation_type="exact_analyt_gf"
+/
+
+&grid
+   nomg = 8000
+   omg_scale = 15.0
+   delta = 0.025
+/
+
+&system
+   ndim = 2 
+   nspin = 2
+   efermi = 0.0
+   vext_npoles=0
+/
+
+#vext_w
+ 1.0  1.5
+
+#ham_init
+ 0.0 1.0 
+ 1.0 0.0
+
+#v_int
+ 4.0 0.0 
+ 0.0 4.0
+

@@ -1,0 +1,36 @@
+
+&control
+   prefix="run02_GWo_model_ndim1"
+   calculation_type="direct"
+   do_pole_analysis = .true.
+   sgm_type="GWo_model"
+   niterx=5
+/
+
+&grid
+   nomg = 20000
+   wmin = -40.0
+   wmax =  40.0
+   delta = 0.02
+/
+
+&system
+   ndim = 1 
+   efermi = 0.0
+   vext_npoles=1
+   vext_res(1)=0.5
+   vext_poles(1)=-1.0
+   W_model_npoles=1
+   W_model_res(1)=1.0
+   W_model_poles(1)=4.0
+/
+
+#vext_w
+ 1.0
+
+#ham_init
+-3.0
+
+#v_int
+ 1.0
+

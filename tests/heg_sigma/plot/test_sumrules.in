@@ -1,0 +1,34 @@
+  &CONTROL
+     prefix = 'RPA_test'
+ calculation = "sumrules"
+    units_in = 'auxfunits'
+       rs_min = 4.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+  &FIT
+    fit_func   = 'gprop'
+    fit_type   = 'NL-F-real'
+    fit_nbasis = 300
+    fit_verb   = .true.
+    fit_niterx = 1000
+    fit_thr    = 1.0d-3
+   /
+
+   &SPECTRALF
+    from_fit     = .false.
+    ene_shift_in = 0.0
+   /
+
+  &SUM_RULES
+   sumrules_calc = .true.
+ sumrules_filein = '1_xgreenfunc.dat'
+ sumrules_filein = '1_xgreenfunc.dat'
+ sumrules_fileoutA= '1_spectrfunc.dat'
+ sumrules_fileoutV= '1_spectrpot.dat'
+ sumrules_fileoutnk= '1_occ_number.dat'
+ sumrules_fileoutwgt= '1_spectralwgt.dat'
+  /
+
+

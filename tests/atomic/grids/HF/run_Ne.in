@@ -1,0 +1,24 @@
+     
+        &CONTROL
+        calculation = "HF"
+             prefix = "atom_10_Ne"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+        /
+     
+        &SYSTEM
+               atom = 'Ne'
+             config = '1s2 2s2 2p6'
+              nspin = 1
+               lmax = 1
+        /
+     
+        &METHOD
+              rxmin = -10.0
+                rdx = 0.015
+               rmax = 100.0
+     
+          grad_type = '3points_rdiff'
+        beta_mixing = 0.4
+             niterx = 40
+        /

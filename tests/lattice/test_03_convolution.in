@@ -1,0 +1,13 @@
+
+&control
+   prefix="run03"
+   calculation_type="convolution_test"
+/
+
+&grid
+   nomg = 8000
+   omg_scale = 15.0
+   delta = 0.025
+/
+
+

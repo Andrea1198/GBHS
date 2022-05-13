@@ -1,0 +1,33 @@
+
+&control
+   prefix="run02_GW_simple"
+   calculation_type="direct"
+   sgm_type="GW-IP"
+   niterx=6
+/
+
+&grid
+   nomg = 20001
+   wmin = -40.0
+   wmax =  40.0
+   delta = 0.02
+/
+
+&system
+   ndim = 2 
+   !nelec = 1.0
+   efermi = 0.0
+   vext_npoles=0
+/
+
+#vext_w
+ 0.0  0.0
+
+#ham_init
+-1.0 2.0 
+ 2.0 1.0
+
+#v_int
+ 1.0 0.5
+ 0.5 1.0
+

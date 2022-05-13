@@ -1,0 +1,16 @@
+
+   &CONTROL
+  calculation = "RPA"
+       rs_min =  15.0
+       rs_max =  20.0
+          nrs =  2
+   /
+
+   &RPA
+           nq = 8000
+           nw = 16000
+       qshift = 0.00000
+       qscale = 0.05
+       wscale = 0.05
+
+   /

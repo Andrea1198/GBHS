@@ -1,0 +1,38 @@
+
+&control
+   prefix="run04_HF_VII"
+   calculation_type="direct"
+   sgm_type="HF"
+   niterx=200
+   iteration_kind=7
+   alpha_mix=0.7
+!   use_rand_v0=.true.
+!   rand_v0_range=50.0
+/
+
+&grid
+   nomg = 8000
+   omg_scale = 15.0
+   delta = 0.025
+/
+
+&system
+   ndim = 2 
+   !nelec = 1.0
+   efermi = 0.0
+   vext_npoles=1
+   vext_res(1)=2.0
+   vext_poles(1)=-3.0
+/
+
+#vext_w
+ 0.2  0.8
+
+#ham_init
+-1.0 2.0 
+ 2.0 1.0
+
+#v_int
+ 0.6 0.3 
+ 0.3 0.6
+

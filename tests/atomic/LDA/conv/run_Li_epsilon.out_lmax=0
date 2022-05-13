@@ -1,0 +1,252 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.3.0  starts ...
+  Date  4Apr2014 at 11:38:24 
+
+     Number of MPI processes:       1
+     Threads/MPI process:           8
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__INTEL -D__FFTW -D__MPI -D__PARA
+      BLAS LIBS :    -L/home/ferretti/devel/agwx/install -lmkl_em64t_nothread
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+  ======================================================================
+  =  Response function Init                                            =
+  ======================================================================
+
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     atom_03_Li
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     EPSILON
+                      step  1 :     EPSILON
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+         Atomic data
+                  Symbol :      Li
+         Atomic Number Z :      3
+           Configuration :      1s1 1s1 2s1
+                    lmax :      0
+                   nspin :      2
+                nelec UP :      2.000
+                nelec DW :      1.000
+
+         Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  1.00
+         1S     1   0   2    0.00  1.00
+         2S     2   0   1    0.00  1.00
+
+ </SYSTEM DATA>
+
+
+ <BASIS DATA>
+
+         Main quantities
+               grid type :      cubic
+              basis type :      bspline
+           bspline order :          4
+            bspline size :        500
+             gauss order :          8
+
+         Radial Grid
+                   nmesh :        504
+                     rdx :     0.0100
+                    rmin :      0.000
+                    rmax :    100.000
+
+      0.000000000    0.000000786    0.000006286    0.000021216    0.000050289    0.000098221
+     97.047437637   97.633235483   98.221385928   98.811893686   99.404763472  100.000000000
+
+         Radial Grid Int
+                   nmesh :       4024
+                    rmin :      0.000
+                    rmax :     99.988
+
+      0.000000016    0.000000080    0.000000186    0.000000321    0.000000465    0.000000599
+     99.545973692   99.647788236   99.756975236   99.858789779   99.939484230   99.988181536
+
+
+ </BASIS DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.800
+                       niterx :      50
+                  dm_conv_thr :    0.1000E-09
+                etot_conv_thr :    0.1000E-09
+
+ </METHOD>
+
+
+ <RESPONSE>
+
+     grid dim :     2
+      omg_min :   0.000000
+      omg_max :   1.000000
+         domg :   1.000000
+
+    nbnd_resp :     0
+   delta_resp :   0.010000
+      use_fxc :     T
+       analyt : TIME-ORDERED
+
+
+     Omg(    1 ) =     0.000000000
+     Omg(    2 ) =     1.000000000
+
+ </RESPONSE>
+
+
+  ======================================================================
+  =  epsilon/Chi0 calculation                                          =
+  ======================================================================
+
+
+          nval : 
+    l(  0) :     2    1
+          nbnd :     2
+     nbnd_resp :   500
+         nspin :     2
+          lmax :     0
+      lmax_val :     0
+      lmax_eps :     0
+   Analyticity :    TIME-ORDERED
+  scf datatype :    LDA
+       use_fxc :     T
+
+     Workspace Memory Usage:       98.105 MB
+   System Data Memory Usage:        8.097 MB
+         Basis Memory Usage:       12.000 MB
+
+
+     HF/DFT eigenval: 
+     eigenval [Ry]: 
+     il  ispin:   0  1
+          -3.7483165     -0.2326496     -0.0039021      0.0016746      0.0062221      0.0132264
+           0.0225374      0.0340717      0.0477753      0.0636241      0.0816173      0.1017584
+           0.1240378      0.1484292      0.1749031      0.2034432      0.2340521      0.2667400
+           0.3015080      0.3383416      0.3772204      0.4181340      0.4610873      0.5060910
+           0.5531464      0.6022416      0.6533618      0.7065027      0.7616719      0.8188780
+           0.8781194      0.9393844      1.0026631      1.0679567      1.1352742      1.2046205
+           1.2759900      1.3493721      1.4247626      1.5021669      1.5815929      1.6630406
+           1.7465019      1.8319693      1.9194443      2.0089342      2.1004432      2.1939668
+           2.2894970      2.3870314
+     il  ispin:   0  2
+          -3.7333702     -0.1382670      0.0002543      0.0026882      0.0075322      0.0147477
+           0.0242774      0.0360537      0.0500115      0.0661043      0.0843136      0.1046414
+           0.1270898      0.1516455      0.1782814      0.2069730      0.2377129      0.2705101
+           0.3053738      0.3422995      0.3812695      0.4222682      0.4652944      0.5103585
+           0.5574680      0.6066170      0.6577913      0.7109819      0.7661928      0.8234340
+           0.8827087      0.9440083      1.0073216      1.0726459      1.1399889      1.2093577
+           1.2807505      1.3541572      1.4295714      1.5069960      1.5864392      1.6679037
+           1.7513832      1.8368695      1.9243615      2.0138659      2.1053881      2.1989258
+           2.2944714      2.3920207
+
+
+
+
+
+  Compute Coulomb potential...
+         Basis Memory Usage:       14.000 MB
+  ... done
+
+       Frequency E(     1 ) =      0.00000 Ry                 
+  ==================================================
+
+
+  Compute Triple Integrals...
+         Basis Memory Usage:       14.128 MB
+  ... done
+
+
+     chi0 RPA... computed for L =  0
+     EPS   2*ndim,  kl,  ku:  1000  512  739
+     Chi... computed
+
+
+
+       Frequency E(     2 ) =      1.00000 Ry                 
+  ==================================================
+
+
+     chi0 RPA... computed for L =  0
+     EPS   2*ndim,  kl,  ku:  1000  512  939
+     Chi... computed
+
+
+
+
+  ======================================================================
+  =  END epsilon/chi0 calculation                                      =
+  ======================================================================
+
+
+
+     Omega [Ry]      alpha0 [Bohr^3]                   alpha [Bohr^3]
+
+    0.000000000       2.125390405    0.076695895       3.094221258    0.158303047
+    1.000000000      -0.298974650    0.138546235      -0.280971411    0.075977043
+
+
+     Omega [Ry]      alpha0 [Ang^3]                    alpha [Ang^3]
+
+    0.000000000       0.314949987    0.011365146       0.458515736    0.023458063
+    1.000000000      -0.044303419    0.020530409      -0.041635618    0.011258623
+
+
+  ======================================================================
+
+   <global routines>
+             clock number :    13
+
+                      agf :    10.00s CPU 
+
+              build_rham0 :     0.00s CPU
+            response_init :     0.00s CPU
+              epsilon_drv :    10.14s CPU
+               compute_vh :     0.08s CPU
+     bspline_rad2spl_rank :     0.02s CPU (       7 calls,   0.003 s avg)
+          compute_vxc_loc :     0.00s CPU
+        operator_diag_drv :     0.38s CPU (       2 calls,   0.188 s avg)
+     basis_CoulombPot_ini :     0.20s CPU
+        response_fxc_init :     0.01s CPU
+                 chi0_rpa :     0.46s CPU (       4 calls,   0.114 s avg)
+     basis_TripleInt_init :     0.00s CPU
+       operator_inv_drv_z :     0.50s CPU (       2 calls,   0.249 s avg)
+
+

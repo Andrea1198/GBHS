@@ -1,0 +1,50 @@
+
+   &CONTROL
+         prefix       = "cosh_LiB+_R06"
+         workdir      = "./"
+         calculation  = "HF, SF_FULL_SSE"
+         !calculation  = "SF_SSE"
+         !
+         do_h         = .TRUE.
+         do_x         = .TRUE.
+         do_sic       = .FALSE.
+         !
+         niterx       = 100
+         alpha        =  0.4
+         grad_type    = "5points" 
+         conv_thr     = 1.0d-10
+         nprint       = 10
+   /
+
+   &SYSTEM
+         alat            =  1.0
+         celldm          =  25.0
+         ngrid_cell      =  20
+         !
+         natom           =   2
+         zv(1)           =  4.0
+         zv(2)           =  7.0
+         !
+         coord(1)        =  -3.0
+         coord(2)        =   3.0
+         !
+         nspin           =  1
+         nbnd            =  6
+         nelec           =  7.0
+   / 
+
+   &POTENTIAL
+         v_dcut          =  0.02
+         v_delta         =  1.5
+         v_beta          =  1.0
+         v_type          = "cosh"
+         h_delta         =  1.5
+   /
+
+   &GREENFUNC
+         ne     = 60
+         emin   =  -6.0
+         emax   =   0.2 
+      gf_delta  = 0.05
+   / 
+

@@ -1,0 +1,32 @@
+
+&control
+   prefix="run10_s2intU1"
+   calculation_type="exact_gf"
+/
+
+&grid
+   nomg = 10001
+   omg_scale = 1.0
+   delta = 0.005
+/
+
+&system
+   ndim = 2 
+   nspin = 2
+   efermi = 0.0
+   vext_npoles=1
+   vext_res(1)=1.0
+   vext_poles(1)=-3.5
+/
+
+#vext_w
+ 1.0  1.5
+
+#ham_init
+ 0.0  2.5 
+ 2.5  0.0
+
+#v_int
+ 1.0  0.0 
+ 0.0  1.0
+

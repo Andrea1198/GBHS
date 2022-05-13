@@ -1,0 +1,53 @@
+
+   &CONTROL
+         prefix       = "cosh_LiB2+_R08"
+         workdir      = "./"
+         !calculation  = "HF, DFT_FULL_SSE"
+         calculation  = "DFT_FULL_SSE"
+         !
+         do_h         = .TRUE.
+         do_x         = .TRUE.
+         do_sic       = .FALSE.
+         !
+         niterx       = 100
+         alpha        =  0.6
+         grad_type    = "5points" 
+         conv_thr     = 1.0d-10
+         rank_thr     = 5.0d-7
+         nprint       = 10
+         sing_treatment = 'svd_smooth'
+!         sing_treatment = 'svd'
+   /
+
+   &SYSTEM
+         alat            =  1.0
+         celldm          =  25.0
+         ngrid_cell      =  20
+         !
+         natom           =   2
+         zv(1)           =  4.0
+         zv(2)           =  7.0
+         !
+         coord(1)        =  -4.0
+         coord(2)        =   4.0
+         !
+         nspin           =  1
+         nbnd            =  6
+         nelec           =  6.0
+   / 
+
+   &POTENTIAL
+         v_dcut          =  0.02
+         v_delta         =  1.5
+         v_beta          =  1.0
+         v_type          = "cosh"
+         h_delta         =  1.5
+   /
+
+   &GREENFUNC
+         ne     = 1000
+         emin   =  -20.0
+         emax   =   +5.0
+         gf_delta  = 0.001
+   /
+

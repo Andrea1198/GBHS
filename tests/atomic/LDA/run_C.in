@@ -1,0 +1,30 @@
+     
+        &CONTROL
+        calculation = "LDA"
+             prefix = "atom_06_C"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+        /
+     
+        &SYSTEM
+               atom = 'C '
+             config = '1s2 2s2 2p2'
+              nspin = 2
+               lmax = 1
+        /
+     
+        &METHOD
+         basis_type = "bspline"
+          grid_type = "cubic"
+      bspline_size  = 750
+      bspline_order = 4
+        gauss_order = 8
+               rmax = 100.0
+
+        beta_mixing = 0.8
+             niterx = 100
+          spin_asym = 0.0
+        dm_conv_thr = 1.0d-12
+      etot_conv_thr = 1.0d-12
+
+        /

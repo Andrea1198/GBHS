@@ -1,0 +1,27 @@
+     
+        &CONTROL
+        calculation = "HF"
+             prefix = "atom_02_He_spin"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+        /
+     
+        &SYSTEM
+               atom = 'He'
+             config = '1s1 1s1'
+              nspin = 2
+               lmax = 0
+               nbnd = 1
+        /
+     
+        &METHOD
+              rxmin = -7.0
+                rdx = 0.010
+               rmax = 40.0
+
+          grad_type = '3points_rdiff'
+        dm_conv_thr = 1.0d-8
+      etot_conv_thr = 1.0d-5
+        beta_mixing = 0.8
+             niterx = 50
+        /

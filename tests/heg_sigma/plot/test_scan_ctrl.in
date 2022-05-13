@@ -1,0 +1,22 @@
+
+   &CONTROL
+     prefix = 'RPA_test'
+  calculation = "scan_ctrl"
+     units_in = 'auxfunits'
+       rs_min = 4.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+   &SCAN_AND_CONTROL
+ sctrl_what= 'gf'
+ sctrl_fileoutg= '1_xgreenfunc_scan_ctrl_grid.dat'
+ sctrl_fileoutp= '1_xgreenfunc_scan_ctrl_poles.dat'
+ sctrl_filein = '1_xgreenfunc.dat'
+ sctrl_verb= .true.
+ sctrl_thr= 1.0d-2
+   /
+
+
+
+

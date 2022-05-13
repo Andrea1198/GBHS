@@ -1,0 +1,16 @@
+
+   &CONTROL
+  calculation = "2EX"
+       rs_min =  1.0
+       rs_max =  1.0
+          nrs = 1
+   /
+
+   &SOSEX
+           nq = 300
+           nk = 100
+           ny = 100
+       qscale = 1.0
+    do_screen = .FALSE.
+
+   /

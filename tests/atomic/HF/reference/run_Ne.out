@@ -1,0 +1,1271 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.3.0  starts ...
+  Date 13Mar2014 at 16:42:43 
+
+     Number of MPI processes:       1
+     Threads/MPI process:           8
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__INTEL -D__FFTW -D__MPI -D__PARA
+      BLAS LIBS :    -L/home/ferretti/devel/agwx/install -lmkl_em64t_nothread
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     atom_10_Ne
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     HF
+                      step  1 :     HF
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+         Atomic data
+                  Symbol :      Ne
+         Atomic Number Z :     10
+           Configuration :      1s2 2s2 2p6
+                    lmax :      1
+                   nspin :      1
+                   nelec :     10.000
+
+         Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  2.00
+         2S     2   0   1    0.00  2.00
+         2P     2   1   1    0.00  6.00
+
+ </SYSTEM DATA>
+
+
+ <BASIS DATA>
+
+         Main quantities
+               grid type :      cubic
+              basis type :      bspline
+           bspline order :          4
+            bspline size :        500
+             gauss order :          8
+
+         Radial Grid
+                   nmesh :        504
+                     rdx :     0.0100
+                    rmin :      0.000
+                    rmax :    100.000
+
+      0.000000000    0.000000786    0.000006286    0.000021216    0.000050289    0.000098221
+     97.047437637   97.633235483   98.221385928   98.811893686   99.404763472  100.000000000
+
+         Radial Grid Int
+                   nmesh :       4024
+                    rmin :      0.000
+                    rmax :     99.988
+
+      0.000000016    0.000000080    0.000000186    0.000000321    0.000000465    0.000000599
+     99.545973692   99.647788236   99.756975236   99.858789779   99.939484230   99.988181536
+
+
+ </BASIS DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.500
+                       niterx :      50
+                  dm_conv_thr :    0.1000E-09
+                etot_conv_thr :    0.1000E-09
+
+ </METHOD>
+
+
+  ======================================================================
+  =  HF SCF loop                                                       =
+  ======================================================================
+
+
+     Workspace Memory Usage:      279.186 MB
+   System Data Memory Usage:       10.064 MB
+         Basis Memory Usage:       12.000 MB
+
+   Calculation :    HF
+  Starting wfc :    H0
+          nbnd :     2
+
+             l       occ up/dw
+       nval  0 :     2
+       nval  1 :     1
+
+
+
+  Diagonalize the init/guess Hamiltonian
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+        -348.2209571    -66.3395673
+     il  ispin:   1  1
+         -63.8608508    -21.7801487
+
+
+
+  Iteration =   1      Method = HF
+  ===============
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:      205.152 MB
+  ... done
+
+      nr,  kl,  ku:   504   94   94
+
+      dm(  0  1) accuracy =     1.882263550
+      dm(  1  1) accuracy =    16.558535220
+            etot accuracy =     1.000000000
+
+
+      Total energy:      259.591934571 Ry,     129.795967285 Ha
+    Kinetic energy:     1462.160263335 Ry,     731.080131667 Ha
+   External energy:    -1528.548053600 Ry,    -764.274026800 Ha
+    Kin/Pot ratio :       -0.822459999   
+
+         h0 energy:      -66.387790265 Ry,     -33.193895132 Ha
+    Hartree energy:      391.722708510 Ry,     195.861354255 Ha
+    NL Exch energy:      -65.742983674 Ry,     -32.871491837 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -25.8396537      0.0010003
+     il  ispin:   1  1
+           0.0020326      0.0060131
+
+
+                              Total time spent up to now :    12.32 secs
+
+
+  Iteration =   2      Method = HF
+  ===============
+      nr,  kl,  ku:   504  196  196
+
+      dm(  0  1) accuracy =     1.323868778
+      dm(  1  1) accuracy =    11.542473068
+            etot accuracy =    74.562719180
+
+
+      Total energy:        3.435449880 Ry,       1.717724940 Ha
+    Kinetic energy:      798.816045128 Ry,     399.408022564 Ha
+   External energy:     -929.413648825 Ry,    -464.706824413 Ha
+    Kin/Pot ratio :       -0.995699323   
+
+         h0 energy:     -130.597603697 Ry,     -65.298801848 Ha
+    Hartree energy:      147.314445234 Ry,      73.657222617 Ha
+    NL Exch energy:      -13.281391657 Ry,      -6.640695828 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -52.9827463     -5.6820255
+     il  ispin:   1  1
+          -4.0272548     -1.6787333
+
+
+                              Total time spent up to now :    23.78 secs
+
+
+  Iteration =   3      Method = HF
+  ===============
+      nr,  kl,  ku:   504  130  130
+
+      dm(  0  1) accuracy =     0.332854257
+      dm(  1  1) accuracy =     2.848289807
+            etot accuracy =     1.025581097
+
+
+      Total energy:     -134.296427105 Ry,     -67.148213553 Ha
+    Kinetic energy:      499.280177855 Ry,     249.640088927 Ha
+   External energy:     -734.173340476 Ry,    -367.086670238 Ha
+    Kin/Pot ratio :       -1.268980090   
+
+         h0 energy:     -234.893162621 Ry,    -117.446581311 Ha
+    Hartree energy:      118.686539432 Ry,      59.343269716 Ha
+    NL Exch energy:      -18.089803916 Ry,      -9.044901958 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -62.1850805     -6.7860489
+     il  ispin:   1  1
+          -4.5164209     -0.6364852
+
+
+                              Total time spent up to now :    35.22 secs
+
+
+  Iteration =   4      Method = HF
+  ===============
+      nr,  kl,  ku:   504  128  128
+
+      dm(  0  1) accuracy =     0.091187527
+      dm(  1  1) accuracy =     0.800707782
+            etot accuracy =     0.320917420
+
+
+      Total energy:     -197.761555231 Ry,     -98.880777615 Ha
+    Kinetic energy:      367.725042050 Ry,     183.862521025 Ha
+   External energy:     -665.118039244 Ry,    -332.559019622 Ha
+    Kin/Pot ratio :       -1.537797356   
+
+         h0 energy:     -297.392997194 Ry,    -148.696498597 Ha
+    Hartree energy:      121.012916626 Ry,      60.506458313 Ha
+    NL Exch energy:      -21.381474663 Ry,     -10.690737332 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -64.7778024     -5.5968999
+     il  ispin:   1  1
+          -3.3758969     -0.1754348
+
+
+                              Total time spent up to now :    46.67 secs
+
+
+  Iteration =   5      Method = HF
+  ===============
+      nr,  kl,  ku:   504  127  127
+
+      dm(  0  1) accuracy =     0.023338868
+      dm(  1  1) accuracy =     0.194431916
+            etot accuracy =     0.132759022
+
+
+      Total energy:     -228.035298356 Ry,    -114.017649178 Ha
+    Kinetic energy:      310.867201677 Ry,     155.433600839 Ha
+   External energy:     -643.409924627 Ry,    -321.704962313 Ha
+    Kin/Pot ratio :       -1.733545698   
+
+         h0 energy:     -332.542722950 Ry,    -166.271361475 Ha
+    Hartree energy:      127.747117836 Ry,      63.873558918 Ha
+    NL Exch energy:      -23.239693242 Ry,     -11.619846621 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.0874158     -4.6449902
+     il  ispin:   1  1
+          -2.4613037     -0.0393589
+
+
+                              Total time spent up to now :    58.08 secs
+
+
+  Iteration =   6      Method = HF
+  ===============
+      nr,  kl,  ku:   504  128  128
+
+      dm(  0  1) accuracy =     0.005804747
+      dm(  1  1) accuracy =     0.057774178
+            etot accuracy =     0.060157709
+
+
+      Total energy:     -242.631450428 Ry,    -121.315725214 Ha
+    Kinetic energy:      284.351151922 Ry,     142.175575961 Ha
+   External energy:     -634.628803894 Ry,    -317.314401947 Ha
+    Kin/Pot ratio :       -1.853281053   
+
+         h0 energy:     -350.277651972 Ry,    -175.138825986 Ha
+    Hartree energy:      131.608895744 Ry,      65.804447872 Ha
+    NL Exch energy:      -23.962694200 Ry,     -11.981347100 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.0917840     -4.1223597
+     il  ispin:   1  1
+          -1.9554489     -0.0056562
+
+
+                              Total time spent up to now :    69.53 secs
+
+
+  Iteration =   7      Method = HF
+  ===============
+      nr,  kl,  ku:   504  130  130
+
+      dm(  0  1) accuracy =     0.001767218
+      dm(  1  1) accuracy =     0.029975718
+            etot accuracy =     0.028689163
+
+
+      Total energy:     -249.797944314 Ry,    -124.898972157 Ha
+    Kinetic energy:      270.590918803 Ry,     135.295459402 Ha
+   External energy:     -628.797665831 Ry,    -314.398832916 Ha
+    Kin/Pot ratio :       -1.923157161   
+
+         h0 energy:     -358.206747028 Ry,    -179.103373514 Ha
+    Hartree energy:      132.503080003 Ry,      66.251540002 Ha
+    NL Exch energy:      -24.094277288 Ry,     -12.047138644 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.2433342     -3.9295354
+     il  ispin:   1  1
+          -1.7679508      0.0005988
+
+
+                              Total time spent up to now :    80.95 secs
+
+
+  Iteration =   8      Method = HF
+  ===============
+      nr,  kl,  ku:   504  130  130
+
+      dm(  0  1) accuracy =     0.000523793
+      dm(  1  1) accuracy =     0.010928215
+            etot accuracy =     0.014205088
+
+
+      Total energy:     -253.397477765 Ry,    -126.698738883 Ha
+    Kinetic energy:      263.321587147 Ry,     131.660793573 Ha
+   External energy:     -624.885254342 Ry,    -312.442627171 Ha
+    Kin/Pot ratio :       -1.962311828   
+
+         h0 energy:     -361.563667196 Ry,    -180.781833598 Ha
+    Hartree energy:      132.256837933 Ry,      66.128418966 Ha
+    NL Exch energy:      -24.090648502 Ry,     -12.045324251 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.4293023     -3.8897184
+     il  ispin:   1  1
+          -1.7285672      0.0015474
+
+
+                              Total time spent up to now :    92.37 secs
+
+
+  Iteration =   9      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000131838
+      dm(  1  1) accuracy =     0.002480270
+            etot accuracy =     0.007200123
+
+
+      Total energy:     -255.235202534 Ry,    -127.617601267 Ha
+    Kinetic energy:      259.808578583 Ry,     129.904289292 Ha
+   External energy:     -622.978720915 Ry,    -311.489360457 Ha
+    Kin/Pot ratio :       -1.982397132   
+
+         h0 energy:     -363.170142332 Ry,    -181.585071166 Ha
+    Hartree energy:      132.053839605 Ry,      66.026919802 Ha
+    NL Exch energy:      -24.118899807 Ry,     -12.059449904 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5316429     -3.8862454
+     il  ispin:   1  1
+          -1.7253878      0.0018224
+
+
+                              Total time spent up to now :   103.80 secs
+
+
+  Iteration =  10      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000034086
+      dm(  1  1) accuracy =     0.000524732
+            etot accuracy =     0.003643720
+
+
+      Total energy:     -256.168609317 Ry,    -128.084304658 Ha
+    Kinetic energy:      258.308338699 Ry,     129.154169349 Ha
+   External energy:     -622.406871294 Ry,    -311.203435647 Ha
+    Kin/Pot ratio :       -1.991716375   
+
+         h0 energy:     -364.098532595 Ry,    -182.049266298 Ha
+    Hartree energy:      132.096533352 Ry,      66.048266676 Ha
+    NL Exch energy:      -24.166610074 Ry,     -12.083305037 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5536719     -3.8794875
+     il  ispin:   1  1
+          -1.7193599      0.0019333
+
+
+                              Total time spent up to now :   115.23 secs
+
+
+  Iteration =  11      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000008761
+      dm(  1  1) accuracy =     0.000134623
+            etot accuracy =     0.001806266
+
+
+      Total energy:     -256.632155341 Ry,    -128.316077670 Ha
+    Kinetic energy:      257.696784417 Ry,     128.848392209 Ha
+   External energy:     -622.342195829 Ry,    -311.171097915 Ha
+    Kin/Pot ratio :       -1.995868675   
+
+         h0 energy:     -364.645411412 Ry,    -182.322705706 Ha
+    Hartree energy:      132.212997797 Ry,      66.106498898 Ha
+    NL Exch energy:      -24.199741725 Ry,     -12.099870862 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5452013     -3.8697715
+     il  ispin:   1  1
+          -1.7101330      0.0019883
+
+
+                              Total time spent up to now :   126.66 secs
+
+
+  Iteration =  12      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000002166
+      dm(  1  1) accuracy =     0.000043820
+            etot accuracy =     0.000881021
+
+
+      Total energy:     -256.858453060 Ry,    -128.429226530 Ha
+    Kinetic energy:      257.411131169 Ry,     128.705565584 Ha
+   External energy:     -622.339578997 Ry,    -311.169789498 Ha
+    Kin/Pot ratio :       -1.997852936   
+
+         h0 energy:     -364.928447828 Ry,    -182.464223914 Ha
+    Hartree energy:      132.282386293 Ry,      66.141193147 Ha
+    NL Exch energy:      -24.212391525 Ry,     -12.106195763 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5377290     -3.8632527
+     il  ispin:   1  1
+          -1.7037346      0.0020087
+
+
+                              Total time spent up to now :   138.09 secs
+
+
+  Iteration =  13      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000617
+      dm(  1  1) accuracy =     0.000017088
+            etot accuracy =     0.000432604
+
+
+      Total energy:     -256.969619238 Ry,    -128.484809619 Ha
+    Kinetic energy:      257.249041231 Ry,     128.624520615 Ha
+   External energy:     -622.302295174 Ry,    -311.151147587 Ha
+    Kin/Pot ratio :       -1.998913807   
+
+         h0 energy:     -365.053253944 Ry,    -182.526626972 Ha
+    Hartree energy:      132.297935480 Ry,      66.148967740 Ha
+    NL Exch energy:      -24.214300775 Ry,     -12.107150388 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5370747     -3.8609056
+     il  ispin:   1  1
+          -1.7013254      0.0020202
+
+
+                              Total time spent up to now :   149.52 secs
+
+
+  Iteration =  14      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000170
+      dm(  1  1) accuracy =     0.000005088
+            etot accuracy =     0.000217825
+
+
+      Total energy:     -257.025605962 Ry,    -128.512802981 Ha
+    Kinetic energy:      257.155570076 Ry,     128.577785038 Ha
+   External energy:     -622.260130484 Ry,    -311.130065242 Ha
+    Kin/Pot ratio :       -1.999494609   
+
+         h0 energy:     -365.104560408 Ry,    -182.552280204 Ha
+    Hartree energy:      132.292983812 Ry,      66.146491906 Ha
+    NL Exch energy:      -24.214029367 Ry,     -12.107014683 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5390338     -3.8606673
+     il  ispin:   1  1
+          -1.7010389      0.0020314
+
+
+                              Total time spent up to now :   160.95 secs
+
+
+  Iteration =  15      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000040
+      dm(  1  1) accuracy =     0.000001030
+            etot accuracy =     0.000111708
+
+
+      Total energy:     -257.054320971 Ry,    -128.527160485 Ha
+    Kinetic energy:      257.108613386 Ry,     128.554306693 Ha
+   External energy:     -622.237515082 Ry,    -311.118757541 Ha
+    Kin/Pot ratio :       -1.999788835   
+
+         h0 energy:     -365.128901696 Ry,    -182.564450848 Ha
+    Hartree energy:      132.289010851 Ry,      66.144505426 Ha
+    NL Exch energy:      -24.214430126 Ry,     -12.107215063 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5403217     -3.8608075
+     il  ispin:   1  1
+          -1.7011601      0.0020332
+
+
+                              Total time spent up to now :   172.38 secs
+
+
+  Iteration =  16      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000010
+      dm(  1  1) accuracy =     0.000000192
+            etot accuracy =     0.000056870
+
+
+      Total energy:     -257.068940483 Ry,    -128.534470241 Ha
+    Kinetic energy:      257.088733574 Ry,     128.544366787 Ha
+   External energy:     -622.232045081 Ry,    -311.116022541 Ha
+    Kin/Pot ratio :       -1.999923011   
+
+         h0 energy:     -365.143311507 Ry,    -182.571655753 Ha
+    Hartree energy:      132.289601831 Ry,      66.144800916 Ha
+    NL Exch energy:      -24.215230807 Ry,     -12.107615403 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5405032     -3.8607674
+     il  ispin:   1  1
+          -1.7011284      0.0020367
+
+
+                              Total time spent up to now :   183.81 secs
+
+
+  Iteration =  17      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000002
+      dm(  1  1) accuracy =     0.000000044
+            etot accuracy =     0.000028216
+
+
+      Total energy:     -257.076194089 Ry,    -128.538097045 Ha
+    Kinetic energy:      257.080890085 Ry,     128.540445043 Ha
+   External energy:     -622.232904196 Ry,    -311.116452098 Ha
+    Kin/Pot ratio :       -1.999981733   
+
+         h0 energy:     -365.152014111 Ry,    -182.576007055 Ha
+    Hartree energy:      132.291620957 Ry,      66.145810478 Ha
+    NL Exch energy:      -24.215800936 Ry,     -12.107900468 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5402659     -3.8606247
+     il  ispin:   1  1
+          -1.7009931      0.0020326
+
+
+                              Total time spent up to now :   195.23 secs
+
+
+  Iteration =  18      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000001
+      dm(  1  1) accuracy =     0.000000013
+            etot accuracy =     0.000013725
+
+
+      Total energy:     -257.079722591 Ry,    -128.539861295 Ha
+    Kinetic energy:      257.077183469 Ry,     128.538591734 Ha
+   External energy:     -622.233734722 Ry,    -311.116867361 Ha
+    Kin/Pot ratio :       -2.000009877   
+
+         h0 energy:     -365.156551254 Ry,    -182.578275627 Ha
+    Hartree energy:      132.292845727 Ry,      66.146422863 Ha
+    NL Exch energy:      -24.216017064 Ry,     -12.108008532 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5400973     -3.8605218
+     il  ispin:   1  1
+          -1.7008904      0.0020345
+
+
+                              Total time spent up to now :   206.66 secs
+
+
+  Iteration =  19      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000005
+            etot accuracy =     0.000006722
+
+
+      Total energy:     -257.081450589 Ry,    -128.540725295 Ha
+    Kinetic energy:      257.074926384 Ry,     128.537463192 Ha
+   External energy:     -622.233451230 Ry,    -311.116725615 Ha
+    Kin/Pot ratio :       -2.000025379   
+
+         h0 energy:     -365.158524846 Ry,    -182.579262423 Ha
+    Hartree energy:      132.293119987 Ry,      66.146559993 Ha
+    NL Exch energy:      -24.216045730 Ry,     -12.108022865 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5400696     -3.8604835
+     il  ispin:   1  1
+          -1.7008480      0.0020321
+
+
+                              Total time spent up to now :   218.09 secs
+
+
+  Iteration =  20      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000001
+            etot accuracy =     0.000003388
+
+
+      Total energy:     -257.082321456 Ry,    -128.541160728 Ha
+    Kinetic energy:      257.073549035 Ry,     128.536774518 Ha
+   External energy:     -622.232861316 Ry,    -311.116430658 Ha
+    Kin/Pot ratio :       -2.000034124   
+
+         h0 energy:     -365.159312281 Ry,    -182.579656141 Ha
+    Hartree energy:      132.293028344 Ry,      66.146514172 Ha
+    NL Exch energy:      -24.216037519 Ry,     -12.108018760 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5400967     -3.8604801
+     il  ispin:   1  1
+          -1.7008472      0.0020322
+
+
+                              Total time spent up to now :   229.52 secs
+
+
+  Iteration =  21      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000001744
+
+
+      Total energy:     -257.082769786 Ry,    -128.541384893 Ha
+    Kinetic energy:      257.072844692 Ry,     128.536422346 Ha
+   External energy:     -622.232525836 Ry,    -311.116262918 Ha
+    Kin/Pot ratio :       -2.000038608   
+
+         h0 energy:     -365.159681144 Ry,    -182.579840572 Ha
+    Hartree energy:      132.292954048 Ry,      66.146477024 Ha
+    NL Exch energy:      -24.216042690 Ry,     -12.108021345 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401178     -3.8604848
+     il  ispin:   1  1
+          -1.7008515      0.0020349
+
+
+                              Total time spent up to now :   240.95 secs
+
+
+  Iteration =  22      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000891
+
+
+      Total energy:     -257.082998721 Ry,    -128.541499361 Ha
+    Kinetic energy:      257.072552391 Ry,     128.536276195 Ha
+   External energy:     -622.232457503 Ry,    -311.116228752 Ha
+    Kin/Pot ratio :       -2.000040636   
+
+         h0 energy:     -365.159905112 Ry,    -182.579952556 Ha
+    Hartree energy:      132.292962360 Ry,      66.146481180 Ha
+    NL Exch energy:      -24.216055969 Ry,     -12.108027984 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401207     -3.8604841
+     il  ispin:   1  1
+          -1.7008532      0.0020334
+
+
+                              Total time spent up to now :   252.38 secs
+
+
+  Iteration =  23      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000442
+
+
+      Total energy:     -257.083112241 Ry,    -128.541556120 Ha
+    Kinetic energy:      257.072442325 Ry,     128.536221162 Ha
+   External energy:     -622.232486283 Ry,    -311.116243141 Ha
+    Kin/Pot ratio :       -2.000041505   
+
+         h0 energy:     -365.160043958 Ry,    -182.580021979 Ha
+    Hartree energy:      132.292997402 Ry,      66.146498701 Ha
+    NL Exch energy:      -24.216065685 Ry,     -12.108032842 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401169     -3.8604825
+     il  ispin:   1  1
+          -1.7008492      0.0020376
+
+
+                              Total time spent up to now :   263.80 secs
+
+
+  Iteration =  24      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000214
+
+
+      Total energy:     -257.083167255 Ry,    -128.541583627 Ha
+    Kinetic energy:      257.072390712 Ry,     128.536195356 Ha
+   External energy:     -622.232507567 Ry,    -311.116253783 Ha
+    Kin/Pot ratio :       -2.000041920   
+
+         h0 energy:     -365.160116855 Ry,    -182.580058428 Ha
+    Hartree energy:      132.293018932 Ry,      66.146509466 Ha
+    NL Exch energy:      -24.216069331 Ry,     -12.108034666 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401129     -3.8604784
+     il  ispin:   1  1
+          -1.7008451      0.0020343
+
+
+                              Total time spent up to now :   275.20 secs
+
+
+  Iteration =  25      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000104
+
+
+      Total energy:     -257.083194109 Ry,    -128.541597054 Ha
+    Kinetic energy:      257.072357472 Ry,     128.536178736 Ha
+   External energy:     -622.232505545 Ry,    -311.116252772 Ha
+    Kin/Pot ratio :       -2.000042154   
+
+         h0 energy:     -365.160148073 Ry,    -182.580074037 Ha
+    Hartree energy:      132.293023695 Ry,      66.146511847 Ha
+    NL Exch energy:      -24.216069731 Ry,     -12.108034865 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401129     -3.8604785
+     il  ispin:   1  1
+          -1.7008458      0.0020336
+
+
+                              Total time spent up to now :   286.62 secs
+
+
+  Iteration =  26      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000053
+
+
+      Total energy:     -257.083207656 Ry,    -128.541603828 Ha
+    Kinetic energy:      257.072336254 Ry,     128.536168127 Ha
+   External energy:     -622.232496348 Ry,    -311.116248174 Ha
+    Kin/Pot ratio :       -2.000042289   
+
+         h0 energy:     -365.160160094 Ry,    -182.580080047 Ha
+    Hartree energy:      132.293021955 Ry,      66.146510978 Ha
+    NL Exch energy:      -24.216069517 Ry,     -12.108034759 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401126     -3.8604782
+     il  ispin:   1  1
+          -1.7008481      0.0020386
+
+
+                              Total time spent up to now :   298.04 secs
+
+
+  Iteration =  27      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000027
+
+
+      Total energy:     -257.083214660 Ry,    -128.541607330 Ha
+    Kinetic energy:      257.072325280 Ry,     128.536162640 Ha
+   External energy:     -622.232490913 Ry,    -311.116245456 Ha
+    Kin/Pot ratio :       -2.000042359   
+
+         h0 energy:     -365.160165633 Ry,    -182.580082816 Ha
+    Hartree energy:      132.293020545 Ry,      66.146510272 Ha
+    NL Exch energy:      -24.216069572 Ry,     -12.108034786 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401137     -3.8604793
+     il  ispin:   1  1
+          -1.7008478      0.0020316
+
+
+                              Total time spent up to now :   309.45 secs
+
+
+  Iteration =  28      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000014
+
+
+      Total energy:     -257.083218249 Ry,    -128.541609125 Ha
+    Kinetic energy:      257.072320831 Ry,     128.536160416 Ha
+   External energy:     -622.232489931 Ry,    -311.116244966 Ha
+    Kin/Pot ratio :       -2.000042390   
+
+         h0 energy:     -365.160169100 Ry,    -182.580084550 Ha
+    Hartree energy:      132.293020641 Ry,      66.146510320 Ha
+    NL Exch energy:      -24.216069790 Ry,     -12.108034895 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401125     -3.8604781
+     il  ispin:   1  1
+          -1.7008497      0.0020371
+
+
+                              Total time spent up to now :   320.87 secs
+
+
+  Iteration =  29      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000007
+
+
+      Total energy:     -257.083220028 Ry,    -128.541610014 Ha
+    Kinetic energy:      257.072319245 Ry,     128.536159623 Ha
+   External energy:     -622.232490561 Ry,    -311.116245281 Ha
+    Kin/Pot ratio :       -2.000042404   
+
+         h0 energy:     -365.160171316 Ry,    -182.580085658 Ha
+    Hartree energy:      132.293021243 Ry,      66.146510621 Ha
+    NL Exch energy:      -24.216069955 Ry,     -12.108034977 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401122     -3.8604779
+     il  ispin:   1  1
+          -1.7008492      0.0020375
+
+
+                              Total time spent up to now :   332.28 secs
+
+
+  Iteration =  30      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000003
+
+
+      Total energy:     -257.083220886 Ry,    -128.541610443 Ha
+    Kinetic energy:      257.072318513 Ry,     128.536159257 Ha
+   External energy:     -622.232491002 Ry,    -311.116245501 Ha
+    Kin/Pot ratio :       -2.000042410   
+
+         h0 energy:     -365.160172489 Ry,    -182.580086244 Ha
+    Hartree energy:      132.293021619 Ry,      66.146510809 Ha
+    NL Exch energy:      -24.216070016 Ry,     -12.108035008 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401141     -3.8604798
+     il  ispin:   1  1
+          -1.7008445      0.0020349
+
+
+                              Total time spent up to now :   343.70 secs
+
+
+  Iteration =  31      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000002
+
+
+      Total energy:     -257.083221304 Ry,    -128.541610652 Ha
+    Kinetic energy:      257.072318014 Ry,     128.536159007 Ha
+   External energy:     -622.232490996 Ry,    -311.116245498 Ha
+    Kin/Pot ratio :       -2.000042413   
+
+         h0 energy:     -365.160172982 Ry,    -182.580086491 Ha
+    Hartree energy:      132.293021700 Ry,      66.146510850 Ha
+    NL Exch energy:      -24.216070021 Ry,     -12.108035011 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401147     -3.8604774
+     il  ispin:   1  1
+          -1.7008497      0.0020370
+
+
+                              Total time spent up to now :   355.12 secs
+
+
+  Iteration =  32      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000001
+
+
+      Total energy:     -257.083221514 Ry,    -128.541610757 Ha
+    Kinetic energy:      257.072317680 Ry,     128.536158840 Ha
+   External energy:     -622.232490845 Ry,    -311.116245422 Ha
+    Kin/Pot ratio :       -2.000042415   
+
+         h0 energy:     -365.160173165 Ry,    -182.580086582 Ha
+    Hartree energy:      132.293021667 Ry,      66.146510833 Ha
+    NL Exch energy:      -24.216070016 Ry,     -12.108035008 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401127     -3.8604784
+     il  ispin:   1  1
+          -1.7008451      0.0020343
+
+
+                              Total time spent up to now :   366.53 secs
+
+
+  Iteration =  33      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000000
+
+
+      Total energy:     -257.083221624 Ry,    -128.541610812 Ha
+    Kinetic energy:      257.072317506 Ry,     128.536158753 Ha
+   External energy:     -622.232490753 Ry,    -311.116245376 Ha
+    Kin/Pot ratio :       -2.000042417   
+
+         h0 energy:     -365.160173247 Ry,    -182.580086624 Ha
+    Hartree energy:      132.293021640 Ry,      66.146510820 Ha
+    NL Exch energy:      -24.216070017 Ry,     -12.108035008 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401148     -3.8604775
+     il  ispin:   1  1
+          -1.7008432      0.0020362
+
+
+                              Total time spent up to now :   377.95 secs
+
+
+  Iteration =  34      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000000
+
+
+      Total energy:     -257.083221680 Ry,    -128.541610840 Ha
+    Kinetic energy:      257.072317437 Ry,     128.536158718 Ha
+   External energy:     -622.232490738 Ry,    -311.116245369 Ha
+    Kin/Pot ratio :       -2.000042417   
+
+         h0 energy:     -365.160173301 Ry,    -182.580086650 Ha
+    Hartree energy:      132.293021641 Ry,      66.146510820 Ha
+    NL Exch energy:      -24.216070020 Ry,     -12.108035010 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401136     -3.8604792
+     il  ispin:   1  1
+          -1.7008446      0.0020348
+
+
+                              Total time spent up to now :   389.37 secs
+
+
+  Iteration =  35      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000000
+
+
+      Total energy:     -257.083221708 Ry,    -128.541610854 Ha
+    Kinetic energy:      257.072317414 Ry,     128.536158707 Ha
+   External energy:     -622.232490750 Ry,    -311.116245375 Ha
+    Kin/Pot ratio :       -2.000042417   
+
+         h0 energy:     -365.160173336 Ry,    -182.580086668 Ha
+    Hartree energy:      132.293021651 Ry,      66.146510826 Ha
+    NL Exch energy:      -24.216070023 Ry,     -12.108035012 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401138     -3.8604795
+     il  ispin:   1  1
+          -1.7008428      0.0020366
+
+
+                              Total time spent up to now :   400.79 secs
+
+
+  Iteration =  36      Method = HF
+  ===============
+      nr,  kl,  ku:   504  131  131
+
+      dm(  0  1) accuracy =     0.000000000
+      dm(  1  1) accuracy =     0.000000000
+            etot accuracy =     0.000000000
+
+
+      Total energy:     -257.083221721 Ry,    -128.541610861 Ha
+    Kinetic energy:      257.072317403 Ry,     128.536158702 Ha
+   External energy:     -622.232490758 Ry,    -311.116245379 Ha
+    Kin/Pot ratio :       -2.000042417   
+
+         h0 energy:     -365.160173355 Ry,    -182.580086677 Ha
+    Hartree energy:      132.293021658 Ry,      66.146510829 Ha
+    NL Exch energy:      -24.216070024 Ry,     -12.108035012 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [Ry]: 
+     il  ispin:   0  1
+         -65.5401124     -3.8604781
+     il  ispin:   1  1
+          -1.7008474      0.0020320
+
+
+                              Total time spent up to now :   412.21 secs
+
+  ----------------------------------------
+     HF: conv. achieved                   
+  ----------------------------------------
+
+
+  Iteration ( HF ):    36
+
+
+      Total energy:     -257.083221735 Ry,    -128.541610867 Ha
+    Kinetic energy:      257.072317388 Ry,     128.536158694 Ha
+   External energy:     -622.232490759 Ry,    -311.116245379 Ha
+    Kin/Pot ratio :       -2.000042417   
+
+         h0 energy:     -365.160173371 Ry,    -182.580086685 Ha
+    Hartree energy:      132.293021660 Ry,      66.146510830 Ha
+    NL Exch energy:      -24.216070024 Ry,     -12.108035012 Ha
+    Loc Exc energy:        0.000000000 Ry,       0.000000000 Ha
+
+
+     eigenval [eV]: 
+     il  ispin:   0  1
+        -891.7256616    -52.5248924
+     il  ispin:   1  1
+         -23.1413897      0.0276474
+
+
+                              Total time spent up to now :   423.37 secs
+
+
+  ======================================================================
+
+   <global routines>
+             clock number :    12
+
+                      agf :  7m 3.00s CPU 
+
+              build_rham0 :     0.01s CPU (       2 calls,   0.003 s avg)
+                  scf_drv :   423.36s CPU
+     bspline_rad2spl_rank :     0.10s CPU (      37 calls,   0.003 s avg)
+        operator_diag_drv :     9.58s CPU (      74 calls,   0.129 s avg)
+       compute_rhos_basis :     0.06s CPU (      37 calls,   0.002 s avg)
+               compute_vh :     3.10s CPU (      37 calls,   0.084 s avg)
+         compute_vx_basis :   409.98s CPU (      74 calls,   5.540 s avg)
+     basis_CoulombInt_ini :     0.53s CPU
+               compute_eh :     0.00s CPU (      37 calls,   0.000 s avg)
+         compute_ex_basis :     0.08s CPU (      37 calls,   0.002 s avg)
+          compute_vxc_loc :     0.00s CPU
+
+

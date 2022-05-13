@@ -1,0 +1,41 @@
+     
+        &CONTROL
+        calculation = "EPSILON"
+             prefix = "atom_03_Li"
+           work_dir = "./SCRATCH"
+            nprint  = 50
+       scf_datatype = "LDA"
+        /
+     
+        &SYSTEM
+               atom = 'Li'
+             config = '1s1 1s1 2s1'
+              nspin = 2
+               lmax = 4
+        /
+     
+        &METHOD
+         basis_type = "bspline"
+          grid_type = "cubic"
+      bspline_size  = 500
+      bspline_order = 4
+        gauss_order = 8
+               rmax = 100.0
+
+        beta_mixing = 0.8
+             niterx = 50
+          spin_asym = 0.0
+        dm_conv_thr = 1.0d-10
+      etot_conv_thr = 1.0d-10
+        /
+
+       &RESPONSE
+               nomg = 2
+            omg_min = 0.0d0
+            omg_max = 1.0d0
+         delta_resp = 0.01
+        analyt_resp = "time-ordered"
+          nbnd_resp = 0
+            use_fxc = .TRUE.
+        /
+

@@ -1,0 +1,370 @@
+
+  ======================================================================
+              =                                            =
+              =         *** AGWX *** Atomic GWX code       =
+              =       HF, MP2, ShamSchluter, PZSIC, GW.    =
+              =                                            =
+  ======================================================================
+
+
+  Program <agf>  v. 2.0.0beta1  starts ...
+  Date 10Feb2019 at 17:25:49 
+
+     Number of MPI processes:       1
+     Threads/MPI process:           8
+
+
+          BUILT :    Tue Apr 13 10:33:17 2010
+           HOST :    x86_64-unknown-linux-gnu
+           ARCH :    x86_64
+             CC :    icc
+            CPP :    cpp
+            F90 :    mpif90
+            F77 :    ifort
+         DFLAGS :    -D__OPENMP -D__DFTI -D__MPI -D__SCALAPACK
+      BLAS LIBS :    -L/opt/intel/composer_xe_2013_sp1.3.174/mkl/lib/intel64 -lmkl_intel_lp64  -lmkl_intel_thread -lmkl_core
+    LAPACK LIBS :    
+       FFT LIBS :    
+      MASS LIBS :    
+
+
+
+
+  ======================================================================
+  =  INPUT Summary                                                     =
+  ======================================================================
+
+ <CONTROL>
+                       prefix :     atom_02_He
+                      postfix :     
+                     work_dir :     ./SCRATCH
+
+                  Calculation :     GW
+                      step  1 :     GW
+
+                       nprint :      50
+            Use banded matrix :     TRUE 
+
+               Use debug mode :     FALSE
+ <CONTROL>
+
+
+ <SYSTEM DATA>
+
+    Atomic data
+                  Symbol :      He
+         Atomic Number Z :      2
+           Configuration :      1s2
+          Pseudopot fule :      
+                    lmax :      4
+                   nspin :      1
+                   nelec :      2.000
+
+    Electronic Configuration
+         id     n   l  isp   j     oc  
+         1S     1   0   1    0.00  2.00
+
+ </SYSTEM DATA>
+
+
+ <BASIS DATA>
+
+         Main quantities
+               grid type :      cubic
+              basis type :      bspline
+           bspline order :          4
+            bspline size :        500
+             gauss order :          8
+
+         Radial Grid
+                   nmesh :        504
+                     rdx :     0.0100
+                    rmin :      0.000
+                    rmax :    100.000
+
+      0.000000000    0.000000786    0.000006286    0.000021216    0.000050289    0.000098221
+     97.047437637   97.633235483   98.221385928   98.811893686   99.404763472  100.000000000
+
+         Radial Grid Int
+                   nmesh :       4024
+                    rmin :      0.000
+                    rmax :     99.988
+
+      0.000000016    0.000000080    0.000000186    0.000000321    0.000000465    0.000000599
+     99.545973692   99.647788236   99.756975236   99.858789779   99.939484230   99.988181536
+
+
+ </BASIS DATA>
+
+
+ <METHOD>
+                  beta_mixing :     0.800
+                       niterx :      50
+                  dm_conv_thr :    0.1000E-09
+                etot_conv_thr :    0.1000E-09
+
+ </METHOD>
+
+
+ <GREEN-FUNCTION>
+
+    grid dim:     1
+        emin:  -5.000000
+        emax:   2.000000
+          de:   0.000000
+
+     nbnd_gf:     5
+    delta_gf:   0.010000
+      analyt: time-ordered
+
+
+
+
+
+
+ </GREEN-FUNCTION>
+
+
+ <RESPONSE>
+
+     grid dim :     2
+      omg_min :   0.000000
+      omg_max :   1.000000
+         domg :   1.000000
+
+    nbnd_resp :     0
+   delta_resp :   0.010000
+      use_fxc :     F
+       analyt : TIME-ORDERED
+
+
+     Omg(    1 ) =     0.000000000
+     Omg(    2 ) =     1.000000000
+
+ </RESPONSE>
+
+
+  ======================================================================
+  =  GW calculation                                                    =
+  ======================================================================
+
+
+          nval : 
+    l(  0) :     1
+    l(  1) :     0
+    l(  2) :     0
+    l(  3) :     0
+    l(  4) :     0
+          nbnd :     1
+       nbnd_W  :   500
+       nbnd_gf :     5
+         nspin :     1
+          lmax :     4
+      lmax_val :     0
+      lmax_W   :     4
+      lmax_gf  :     4
+      lmax_QP  :     0
+  Starting wfc :    HF
+   Analyticity :    time-ordered
+     GF method :    gw-contour-deformation
+
+
+
+     Workspace Memory Usage:      100.084 MB
+   System Data Memory Usage:       22.074 MB
+         Basis Memory Usage:       12.000 MB
+
+
+
+
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:       76.384 MB
+  ... done
+
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:      140.768 MB
+  ... done
+
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:      205.152 MB
+  ... done
+
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:      269.536 MB
+  ... done
+
+
+  Compute Coulomb integrals Rfunc...
+         Basis Memory Usage:      333.920 MB
+  ... done
+
+
+     HF/DFT eigenval: 
+     eigenval [Ry]: 
+     il  ispin:   0  1
+          -1.8358867      0.0010262      0.0041000      0.0092250      0.0163983
+     il  ispin:   1  1
+                          0.0020344      0.0060144      0.0119843      0.0199390      0.0298836
+     il  ispin:   2  1
+                                         0.0033416      0.0083312      0.0153009      0.0242637
+                                         0.0352065
+     il  ispin:   3  1
+                                                        0.0049035      0.0109312      0.0188951
+                                                        0.0288681      0.0408139
+     il  ispin:   4  1
+                                                        0.0067436      0.0137918      0.0228119
+                                                        0.0337676      0.0466953
+
+
+
+
+
+  Compute Coulomb potential...
+         Basis Memory Usage:       22.000 MB
+  ... done
+
+
+  Compute Fermi energy...
+        System is closed-shell =  T
+                        Efermi =    -0.917943366
+  ... done
+
+  ======================================================================
+  =  Compute W on imaginary axis                                       =
+  ======================================================================
+
+         ImgInt Memory Usage:      360.360MB
+
+  Compute Triple Integrals...
+         Basis Memory Usage:       22.128 MB
+  ... done
+
+ <14s> W(iw) [w=1-9] |                                                  | [000%] --(E) --(X)
+ <25s> W(iw) [w=1-9] |#####                                             | [011%] 11s(E) 01m-39s(X)
+ <32s> W(iw) [w=1-9] |###########                                       | [022%] 18s(E) 01m-22s(X)
+ <39s> W(iw) [w=1-9] |################                                  | [033%] 24s(E) 01m-14s(X)
+ <46s> W(iw) [w=1-9] |######################                            | [044%] 31s(E) 01m-11s(X)
+ <54s> W(iw) [w=1-9] |###########################                       | [055%] 39s(E) 01m-11s(X)
+ <01m-00s> W(iw) [w=1-9] |#################################                 | [066%] 46s(E) 01m-09s(X)
+ <01m-07s> W(iw) [w=1-9] |######################################            | [077%] 53s(E) 01m-08s(X)
+ <01m-15s> W(iw) [w=1-9] |############################################      | [088%] 01m-01s(E) 01m-08s(X)
+            nmax_img=   34
+         ImgInt Memory Usage:       24.505MB
+
+  ======================================================================
+  =  Main CD Loop                                                      =
+  ======================================================================
+
+       Frequency E(     1 ) =     -5.00000 Ry                 
+  ==================================================
+
+
+     Contributions of GF poles: (ilg, ilw) =    0   0
+
+        Considering: (ib,il) =    1   0
+            Searching poles...
+            Computing W at:   Eig(    1   1 ) =     -1.83589 eV
+            nmax=   64
+        Considering: (ib,il) =    2   0
+            Searching poles...
+        Considering: (ib,il) =    3   0
+            Searching poles...
+        Considering: (ib,il) =    4   0
+            Searching poles...
+        Considering: (ib,il) =    5   0
+            Searching poles...
+            Subtracting img axis integral...
+
+     Contributions of GF poles: (ilg, ilw) =    1   1
+
+        Considering: (ib,il) =    1   0
+            Searching poles...
+        Considering: (ib,il) =    2   0
+            Searching poles...
+        Considering: (ib,il) =    3   0
+            Searching poles...
+        Considering: (ib,il) =    4   0
+            Searching poles...
+        Considering: (ib,il) =    5   0
+            Searching poles...
+            Subtracting img axis integral...
+
+     Contributions of GF poles: (ilg, ilw) =    2   2
+
+        Considering: (ib,il) =    1   0
+            Searching poles...
+        Considering: (ib,il) =    2   0
+            Searching poles...
+        Considering: (ib,il) =    3   0
+            Searching poles...
+        Considering: (ib,il) =    4   0
+            Searching poles...
+        Considering: (ib,il) =    5   0
+            Searching poles...
+            Subtracting img axis integral...
+
+     Contributions of GF poles: (ilg, ilw) =    3   3
+
+        Considering: (ib,il) =    1   0
+            Searching poles...
+        Considering: (ib,il) =    2   0
+            Searching poles...
+        Considering: (ib,il) =    3   0
+            Searching poles...
+        Considering: (ib,il) =    4   0
+            Searching poles...
+        Considering: (ib,il) =    5   0
+            Searching poles...
+            Subtracting img axis integral...
+
+     Contributions of GF poles: (ilg, ilw) =    4   4
+
+        Considering: (ib,il) =    1   0
+            Searching poles...
+        Considering: (ib,il) =    2   0
+            Searching poles...
+        Considering: (ib,il) =    3   0
+            Searching poles...
+        Considering: (ib,il) =    4   0
+            Searching poles...
+        Considering: (ib,il) =    5   0
+            Searching poles...
+            Subtracting img axis integral...
+
+
+  ======================================================================
+
+   <global routines>
+             clock number :    24
+
+                      agf :  2m 4.00s CPU 
+
+       operator_inv_drv_d :     0.01s CPU
+              build_rham0 :     0.01s CPU (       5 calls,   0.002 s avg)
+           greenfunc_init :     0.00s CPU
+            response_init :     0.00s CPU
+                   gw_drv :   124.74s CPU
+               compute_vh :     0.08s CPU
+     bspline_rad2spl_rank :     0.00s CPU
+         compute_vx_basis :    10.64s CPU (       5 calls,   2.128 s avg)
+     basis_ExchangeInt_in :     3.73s CPU (       5 calls,   0.745 s avg)
+        operator_diag_drv :     0.52s CPU (       5 calls,   0.104 s avg)
+     basis_CoulombPot_ini :     0.78s CPU
+     bspline_rad2spl_rank :     0.58s CPU (       5 calls,   0.116 s avg)
+              ImgInt_init :    68.53s CPU
+                compute_W :     5.95s CPU (      46 calls,   0.129 s avg)
+                 chi0_rpa :     3.47s CPU (      46 calls,   0.075 s avg)
+     basis_TripleInt_init :     0.00s CPU
+       operator_inv_drv_z :     0.13s CPU (      48 calls,   0.003 s avg)
+          compute_gw_sgmc :    41.72s CPU
+             gw_sgm_poles :     1.58s CPU (       5 calls,   0.316 s avg)
+                set_Bvect :     0.02s CPU (      64 calls,   0.000 s avg)
+          gw_sgm_img_axis :    40.14s CPU (       5 calls,   8.028 s avg)
+               compute_GF :     0.06s CPU (       2 calls,   0.029 s avg)
+       compute_rhos_basis :     0.00s CPU (       2 calls,   0.001 s avg)
+
+

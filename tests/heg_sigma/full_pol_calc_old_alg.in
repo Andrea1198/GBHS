@@ -1,0 +1,44 @@
+
+   &CONTROL
+        prefix='RPA_test_nq_1000'
+  calculation = "polariz_rpa,fit"
+     units_in = 'auxfunits'
+       rs_min = 5.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+ &GRIDS
+           nw = 1000
+        w_min = -10
+        w_max = 10
+      w_gtype = 'uniform'
+      w_units = 'qreduced'
+         nk_r = 10000
+        nk_th = 3000
+        k_max = 1
+      k_gtype = 'uniform'
+      lkshift = .false.
+   k_r_gauleg = .false.
+         nq_r = 1000
+        nq_th = 1000
+        q_max = 10
+      q_gtype = 'uniform'
+      lqshift = .false.
+   q_r_gauleg = .false.
+     delta_in = 10
+   /
+
+   &PLOT
+       what="pol_vs_w"
+   /
+
+   &FIT
+    fit_func   = 'polarizability'
+    fit_type   = 'NO-FIT'
+    fit_nbasis = 300
+    fit_verb   = .true.
+    fit_niterx = 1000
+    fit_thr    = 1.0d-3
+   /
+

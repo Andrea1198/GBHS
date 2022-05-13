@@ -1,0 +1,26 @@
+
+  &CONTROL
+        prefix='RPA_test_para'
+ calculation = "polariz_rpa,plot"
+    units_in = 'auxfunits'
+       rs_min = 5.0
+       rs_max = 6.0
+          nrs = 1
+   /
+
+ &GRIDS
+           nw = 1000 
+        w_min = -10
+        w_max = 10
+         nk_r = 1000
+        nk_th = 1000
+        k_max = 1
+         nq_r = 4
+        q_max = 0.6
+     delta_in = 10
+   /
+
+   &PLOT
+       what="pol_vs_w"
+   /
+

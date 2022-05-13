@@ -1,0 +1,16 @@
+
+   &CONTROL
+  calculation = "SOSEX"
+       rs_min = 10.0
+       rs_max = 20.0
+          nrs = 3
+   /
+
+   &SOSEX
+           nq = 300
+           nk = 100
+           ny = 100
+       qscale = 1.0
+    do_screen = .TRUE.
+
+   /
