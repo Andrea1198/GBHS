@@ -9,20 +9,21 @@ include ../make.inc
 #
 # MAIN target
 #
-all: lib_ctools lib_base lib_atomic \
-     lib_onedim lib_lattice lib_heg lib_heg_sigma
+#all: lib_ctools lib_base lib_atomic \
+#lib_onedim lib_lattice lib_heg lib_heg_sigma
+all: lib_base lib_sprel
 
 #
 # drv
 #
-lib_ctools : 
-	 if test -d ctools ;     then ( cd ctools;    $(MAKE) ) ; fi
+#lib_ctools : 
+#	 if test -d ctools ;     then ( cd ctools;    $(MAKE) ) ; fi
 
-lib_base : ctools
+lib_base : #ctools
 	 if test -d baselib ;    then ( cd baselib;   $(MAKE) ) ; fi
 
-lib_atomic : lib_base
-	 if test -d atomic ;     then ( cd atomic;    $(MAKE) ) ; fi
+lib_sprel : lib_base
+	 if test -d sprel ;      then ( cd sprel;     $(MAKE) ) ; fi
 
 lib_onedim : lib_base
 	 if test -d onedim ;     then ( cd onedim;    $(MAKE) ) ; fi
@@ -40,7 +41,7 @@ lib_lattice : lib_base
 # cleaning
 #
 clean wash:
-	 if test -d ctools ;     then ( cd ctools;     $(MAKE) $@ ) ; fi
+	 #if test -d ctools ;     then ( cd ctools;     $(MAKE) $@ ) ; fi
 	 if test -d baselib ;    then ( cd baselib;    $(MAKE) $@ ) ; fi
 	 if test -d atomic ;     then ( cd atomic;     $(MAKE) $@ ) ; fi
 	 if test -d onedim ;     then ( cd onedim;     $(MAKE) $@ ) ; fi

@@ -30,7 +30,7 @@
 TOPDIR = $(dir $(abspath $(filter %make.inc,$(MAKEFILE_LIST))))
 # if it doesn't work, uncomment the following line (edit if needed):
 
-# TOPDIR = /home/apintus/GBHS
+# TOPDIR = /e/coding/GBHS
 
 # DFLAGS  = precompilation options (possible arguments to -D and -U)
 #           used by the C compiler and preprocessor
@@ -42,7 +42,7 @@ TOPDIR = $(dir $(abspath $(filter %make.inc,$(MAKEFILE_LIST))))
 # MANUAL_DFLAGS  = additional precompilation option(s), if desired
 #                  BEWARE: it does not work for IBM xlf! Manually edit FDFLAGS
 MANUAL_DFLAGS  =
-DFLAGS         =  -D__FFTW -D__MPI
+DFLAGS         =  -D__FFTW
 FDFLAGS        = $(DFLAGS) $(MANUAL_DFLAGS)
 
 # IFLAGS = how to locate directories with *.h or *.f90 file to be included
@@ -65,10 +65,10 @@ MOD_FLAG      = -I
 # try to specify the directory containing "mpif.h" in IFLAGS
 # and to specify the location of MPI libraries in MPI_LIBS
 
-MPIF90         = mpif90
+MPIF90         = gfortran
 F90           = gfortran
-CC             = cc
-F77            = f77
+CC             = gcc
+F77            = gfortran
 
 # C preprocessor and preprocessing flags - for explicit preprocessing,
 # if needed (see the compilation rules above)
@@ -98,7 +98,7 @@ FFLAGS_NOMAIN   =
 # Linker, linker-specific flags (if any)
 # Typically LD coincides with F90 or MPIF90, LD_LIBS is empty
 
-LD             = mpif90
+LD             = gfortran
 LDFLAGS        = -g -pthread
 LD_LIBS        = 
 
@@ -108,8 +108,8 @@ LD_LIBS        =
 # BLAS_LIBS = /your/path/to/espresso/LAPACK/blas.a
 # BLAS_LIBS_SWITCH = internal
 
-BLAS_LIBS      =  -lblas 
-BLAS_LIBS_SWITCH = external
+BLAS_LIBS      = $(TOPDIR)/extlibs/blas/lib/libblas.a 
+BLAS_LIBS_SWITCH = internal
 
 # If you have nothing better, use the local copy via "--with-netlib" :
 # LAPACK_LIBS = /your/path/to/espresso/LAPACK/lapack.a
@@ -117,8 +117,8 @@ BLAS_LIBS_SWITCH = external
 # For IBM machines with essl (-D__ESSL): load essl BEFORE lapack !
 # remember that LAPACK_LIBS precedes BLAS_LIBS in loading order
 
-LAPACK_LIBS    =  -llapack  -lblas 
-LAPACK_LIBS_SWITCH = external
+LAPACK_LIBS    = $(TOPDIR)/extlibs/lapack/lib/liblapack.a
+LAPACK_LIBS_SWITCH = internal
 
 SCALAPACK_LIBS = 
 
@@ -168,7 +168,7 @@ LIBOBJS        = $(TOPDIR)/src/ctools/libagwx_ctools.a  $(TOPDIR)/extlibs/iotk/l
 LIBS           = $(SCALAPACK_LIBS) $(LAPACK_LIBS) $(FOX_LIB) $(FFT_LIBS) $(BLAS_LIBS) $(MPI_LIBS) $(MASS_LIBS) $(HDF5_LIB) $(PYTHON_LIBS) $(LD_LIBS)
 
 # wget or curl - useful to download from network
-WGET = wget -O
+WGET = curl -o
 
 # Install directory - not currently used
 PREFIX = /usr/local

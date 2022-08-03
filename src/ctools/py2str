@@ -1,0 +1,40 @@
+#! /bin/bash 
+
+MANUAL=" Usage
+   py2str [-h] [-o <fileout>] <filein>
+   
+   -h          prints this help
+   -o <file>   output file
+   <filein>    input file
+"
+#================================================================
+
+fileout=a.out
+
+while getopts :ho: OPT
+do
+  case $OPT in
+  (o) fileout=$OPTARG ; shift 2;;
+  (h) echo "$MANUAL" ; exit 0 ;;
+  (:) echo "error: $OPTARG requires an argument" ; exit 1 ;;
+  (?) echo "error: unkwown option $OPTARG" ; exit 1 ;;
+  esac
+done
+
+filein=$1
+if [ -z "$filein" ] ;  then echo "ERROR: no input file provided" ; exit 2 ; fi
+if [ -z "$fileout" ] ; then echo "ERROR: no output files provided" ; exit 2 ; fi
+
+#================================================================
+
+#echo "fileout: $fileout"
+#echo " filein: $filein"
+
+if [ -e "$fileout" ] ; then rm "$fileout" ; fi
+
+cat $filein | awk '{
+      printf " \" %s \\n\"\n",$0
+      }' > $fileout
+
+exit 0
+

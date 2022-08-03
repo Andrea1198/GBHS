@@ -2,7 +2,7 @@
 #define __IOTK_CONFIG_H
 
 ! Max rank
-
+!@IOTK_MAX_RANK@
 ! End of Max rank
 
 
@@ -32,18 +32,18 @@
 ! commented out according to QE definitions
 !
 !! Type definitions:
-!#define __IOTK_INTEGER1 4
-!
-!
-!
-!#define __IOTK_LOGICAL1 4
-!
-!
-!
-!#define __IOTK_REAL1 4
-!#define __IOTK_REAL2 8
-!#define __IOTK_REAL3 10
-!#define __IOTK_REAL4 16
+!@IOTK_INTEGER1@
+!@IOTK_INTEGER2@
+!@IOTK_INTEGER3@
+!@IOTK_INTEGER4@
+!@IOTK_LOGICAL1@
+!@IOTK_LOGICAL2@
+!@IOTK_LOGICAL3@
+!@IOTK_LOGICAL4@
+!@IOTK_REAL1@
+!@IOTK_REAL2@
+!@IOTK_REAL3@
+!@IOTK_REAL4@
 !! End of type definitions
 
 
@@ -87,15 +87,15 @@
 #endif
 
 !! Workarounds for bugs:
-!
-!
-!
-!
-!
-!
-!
-!
-!
+!@IOTK_WORKAROUND1@
+!@IOTK_WORKAROUND2@
+!@IOTK_WORKAROUND3@
+!@IOTK_WORKAROUND4@
+!@IOTK_WORKAROUND5@
+!@IOTK_WORKAROUND6@
+!@IOTK_WORKAROUND7@
+!@IOTK_WORKAROUND8@
+!@IOTK_WORKAROUND9@
 
 #endif
 

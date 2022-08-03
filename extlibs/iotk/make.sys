@@ -19,17 +19,17 @@
 # compiler definitions
 
 
-CC                  = cc
+CC                  = gcc
 CFLAGS              = -O3 $(DFLAGS) $(IFLAGS)
 CPP                 = cpp
 CPPFLAGS            = -P -traditional $(DFLAGS) $(IFLAGS)
 F90                 = gfortran
-MPIF90              = mpif90
+MPIF90              = gfortran
 F90FLAGS            = $(FFLAGS) -x f95-cpp-input $(FDFLAGS) $(IFLAGS) 
-F77                 = f77
+F77                 = gfortran
 FFLAGS              = -O3 -g
 FFLAGS_NOOPT        = -O0 -g
-LD                  = mpif90
+LD                  = gfortran
 LDFLAGS             = -g -pthread
 AR                  = ar
 ARFLAGS             = ruv
@@ -39,7 +39,7 @@ RANLIB              = ranlib
 #------------------------------
 # specific definitions
 
-DFLAGS         =  -D__FFTW -D__MPI
+DFLAGS         =  -D__FFTW
 FDFLAGS        = $(DFLAGS) $(MANUAL_DFLAGS)
 IFLAGS         = $(AUTO_INCLUDE)
 LIBOBJS        = $(AUTO_LIBS)
@@ -48,7 +48,7 @@ LIBOBJS        = $(AUTO_LIBS)
 # -----------------------------
 # libraries
 
-TOPDIR              = /home/apintus/GBHS
+TOPDIR              = /e/coding/GBHS
 #
 LIB_MPI             = 
 LIB_MASS            = 
